@@ -1,0 +1,3012 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Library Type="DipTrace-PatternLibrary" Name="WFxx" Hint="WFxx connectors" Version="4.2.0.1" Units="mm">
+	<PadTypes>
+		<PadType Name="PadT0" Type="Through" HoleType="Round" Hole="1.2" Side="Top">
+			<MainStack Shape="Obround" Width="1.8" Height="3" XOff="0" YOff="0"/>
+		</PadType>
+	</PadTypes>
+	<Patterns>
+		<Pattern RefDes="J" Mounting="None" Width="5.08" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="2">
+			<Name>WF02S</Name>
+			<Value>WF02S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="2.9"/>
+						<Item X="2.54" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="-2.3"/>
+						<Item X="2.54" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="2.9"/>
+						<Item X="2.54" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="-2.3"/>
+						<Item X="2.54" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-02_Stright.wrl</Path>
+					<Var>WF-02_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="7.62" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="3">
+			<Name>WF03S</Name>
+			<Value>WF03S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="2.9"/>
+						<Item X="3.81" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="-2.3"/>
+						<Item X="3.81" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="2.9"/>
+						<Item X="3.81" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="-2.3"/>
+						<Item X="3.81" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-03_Stright.wrl</Path>
+					<Var>WF-03_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="10.16" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="4">
+			<Name>WF04S</Name>
+			<Value>WF04S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="2.9"/>
+						<Item X="5.08" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="-2.3"/>
+						<Item X="5.08" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="2.9"/>
+						<Item X="5.08" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="-2.3"/>
+						<Item X="5.08" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-04_Stright.wrl</Path>
+					<Var>WF-04_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="12.7" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="5">
+			<Name>WF05S</Name>
+			<Value>WF05S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="2.9"/>
+						<Item X="6.35" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="-2.3"/>
+						<Item X="6.35" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="2.9"/>
+						<Item X="6.35" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="-2.3"/>
+						<Item X="6.35" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-05_Stright.wrl</Path>
+					<Var>WF-05_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="15.24" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="6">
+			<Name>WF06S</Name>
+			<Value>WF06S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="2.9"/>
+						<Item X="7.62" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="-2.3"/>
+						<Item X="7.62" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="2.9"/>
+						<Item X="7.62" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="-2.3"/>
+						<Item X="7.62" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-06_Stright.wrl</Path>
+					<Var>WF-06_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="17.78" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="7">
+			<Name>WF07S</Name>
+			<Value>WF07S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="2.9"/>
+						<Item X="8.89" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="-2.3"/>
+						<Item X="8.89" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="2.9"/>
+						<Item X="8.89" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="-2.3"/>
+						<Item X="8.89" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-07_Stright.wrl</Path>
+					<Var>WF-07_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="20.32" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="8">
+			<Name>WF08S</Name>
+			<Value>WF08S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="2.9"/>
+						<Item X="10.16" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="-2.3"/>
+						<Item X="10.16" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="2.9"/>
+						<Item X="10.16" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="-2.3"/>
+						<Item X="10.16" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-08_Stright.wrl</Path>
+					<Var>WF-08_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="22.86" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="9">
+			<Name>WF09S</Name>
+			<Value>WF09S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="2.9"/>
+						<Item X="11.43" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="-2.3"/>
+						<Item X="11.43" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="2.9"/>
+						<Item X="11.43" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="-2.3"/>
+						<Item X="11.43" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-09_Stright.wrl</Path>
+					<Var>WF-09_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="25.4" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="10">
+			<Name>WF10S</Name>
+			<Value>WF10S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="2.9"/>
+						<Item X="12.7" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="-2.3"/>
+						<Item X="12.7" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="2.9"/>
+						<Item X="12.7" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="-2.3"/>
+						<Item X="12.7" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-10_Stright.wrl</Path>
+					<Var>WF-10_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="27.94" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="11">
+			<Name>WF11S</Name>
+			<Value>WF11S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="2.9"/>
+						<Item X="13.97" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="-2.3"/>
+						<Item X="13.97" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="2.9"/>
+						<Item X="13.97" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="-2.3"/>
+						<Item X="13.97" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-11_Stright.wrl</Path>
+					<Var>WF-11_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="30.48" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="12">
+			<Name>WF12S</Name>
+			<Value>WF12S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="2.9"/>
+						<Item X="15.24" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="-2.3"/>
+						<Item X="15.24" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="2.9"/>
+						<Item X="15.24" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="-2.3"/>
+						<Item X="15.24" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-12_Stright.wrl</Path>
+					<Var>WF-12_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="33.02" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="13">
+			<Name>WF13S</Name>
+			<Value>WF13S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="2.9"/>
+						<Item X="16.51" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="-2.3"/>
+						<Item X="16.51" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="2.9"/>
+						<Item X="16.51" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="-2.3"/>
+						<Item X="16.51" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-13_Stright.wrl</Path>
+					<Var>WF-13_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="35.56" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="14">
+			<Name>WF14S</Name>
+			<Value>WF14S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="2.9"/>
+						<Item X="17.78" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="-2.3"/>
+						<Item X="17.78" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="2.9"/>
+						<Item X="17.78" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="-2.3"/>
+						<Item X="17.78" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-14_Stright.wrl</Path>
+					<Var>WF-14_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="38.1" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="15">
+			<Name>WF15S</Name>
+			<Value>WF15S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="2.9"/>
+						<Item X="19.05" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="-2.3"/>
+						<Item X="19.05" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="2.9"/>
+						<Item X="19.05" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="-2.3"/>
+						<Item X="19.05" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-15_Stright.wrl</Path>
+					<Var>WF-15_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="40.64" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="16">
+			<Name>WF16S</Name>
+			<Value>WF16S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="2.9"/>
+						<Item X="20.32" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="-2.3"/>
+						<Item X="20.32" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="2.9"/>
+						<Item X="20.32" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="-2.3"/>
+						<Item X="20.32" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-16_Stright.wrl</Path>
+					<Var>WF-16_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="43.18" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="17">
+			<Name>WF17S</Name>
+			<Value>WF17S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-20.32" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="20.32" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="2.9"/>
+						<Item X="21.59" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="-2.3"/>
+						<Item X="21.59" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="2.9"/>
+						<Item X="21.59" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="-2.3"/>
+						<Item X="21.59" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-17_Stright.wrl</Path>
+					<Var>WF-17_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="45.72" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="18">
+			<Name>WF18S</Name>
+			<Value>WF18S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-21.59" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="21.59" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="2.9"/>
+						<Item X="22.86" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="-2.3"/>
+						<Item X="22.86" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="2.9"/>
+						<Item X="22.86" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="-2.3"/>
+						<Item X="22.86" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-18_Stright.wrl</Path>
+					<Var>WF-18_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="48.26" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="19">
+			<Name>WF19S</Name>
+			<Value>WF19S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-22.86" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-20.32" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="20.32" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="22.86" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>19</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="2.9"/>
+						<Item X="24.13" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="-2.3"/>
+						<Item X="24.13" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="2.9"/>
+						<Item X="24.13" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="-2.3"/>
+						<Item X="24.13" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="inch" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-19_Stright.wrl</Path>
+					<Var>WF-19_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.039" Y="0.039" Z="0.039"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="50.8" Height="5.8" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="20">
+			<Name>WF20S</Name>
+			<Value>WF20S</Value>
+			<Origin X="0" Y="-0.4" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="-24.13" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-21.59" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="21.59" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>19</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="24.13" Y="-0.4" Angle="0" Locked="N" Side="Top">
+					<Number>20</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="2.9"/>
+						<Item X="25.4" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="-2.3"/>
+						<Item X="25.4" Y="-2.3"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="2.9"/>
+						<Item X="25.4" Y="-2.9"/>
+					</Points>
+				</Shape>
+				<Shape Type="Line" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="-2.3"/>
+						<Item X="25.4" Y="-2.3"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-0.4" AutoHeight="0" AutoColor="4934475"
+					 Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-20_Stright.wrl</Path>
+					<Var>WF-20_Stright.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="5.08" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="2">
+			<Name>WF02R</Name>
+			<Value>WF02R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="-0.825"/>
+						<Item X="2.54" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-1.27" Y="7.375"/>
+						<Item X="1.27" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="-0.825"/>
+						<Item X="2.54" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-1.27" Y="7.375"/>
+						<Item X="1.27" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-02_Right_Angle.wrl</Path>
+					<Var>WF-02_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="7.62" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="3">
+			<Name>WF03R</Name>
+			<Value>WF03R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="-0.825"/>
+						<Item X="3.81" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="7.375"/>
+						<Item X="2.54" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="-0.825"/>
+						<Item X="3.81" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-2.54" Y="7.375"/>
+						<Item X="2.54" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-03_Right_Angle.wrl</Path>
+					<Var>WF-03_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="10.16" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="4">
+			<Name>WF04R</Name>
+			<Value>WF04R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="-0.825"/>
+						<Item X="5.08" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="7.375"/>
+						<Item X="3.81" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="-0.825"/>
+						<Item X="5.08" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-3.81" Y="7.375"/>
+						<Item X="3.81" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>C:\Users\alexa\Documents\DipTrace\My Libraries\3d_models\WFxx\WF-04_Right_Angle.wrl</Path>
+					<Var>C:\Users\alexa\Documents\DipTrace\My Libraries\3d_models\WFxx\WF-04_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="12.7" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="5">
+			<Name>WF05R</Name>
+			<Value>WF05R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="-0.825"/>
+						<Item X="6.35" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="7.375"/>
+						<Item X="5.08" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="-0.825"/>
+						<Item X="6.35" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-5.08" Y="7.375"/>
+						<Item X="5.08" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-05_Right_Angle.wrl</Path>
+					<Var>WF-05_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="15.24" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="6">
+			<Name>WF06R</Name>
+			<Value>WF06R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="-0.825"/>
+						<Item X="7.62" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="7.375"/>
+						<Item X="6.35" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="-0.825"/>
+						<Item X="7.62" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-6.35" Y="7.375"/>
+						<Item X="6.35" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-06_Right_Angle.wrl</Path>
+					<Var>WF-06_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="17.78" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="7">
+			<Name>WF07R</Name>
+			<Value>WF07R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.7925" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.7925" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.7925" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="-0.825"/>
+						<Item X="8.89" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="7.375"/>
+						<Item X="7.62" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="-0.825"/>
+						<Item X="8.89" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-7.62" Y="7.375"/>
+						<Item X="7.62" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-07_Right_Angle.wrl</Path>
+					<Var>WF-07_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="20.32" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="8">
+			<Name>WF08R</Name>
+			<Value>WF08R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="-0.825"/>
+						<Item X="10.16" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="7.375"/>
+						<Item X="8.89" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="-0.825"/>
+						<Item X="10.16" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-8.89" Y="7.375"/>
+						<Item X="8.89" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-08_Right_Angle.wrl</Path>
+					<Var>WF-08_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="22.86" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="9">
+			<Name>WF09R</Name>
+			<Value>WF09R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="-0.825"/>
+						<Item X="11.43" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="7.375"/>
+						<Item X="10.16" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="-0.825"/>
+						<Item X="11.43" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-10.16" Y="7.375"/>
+						<Item X="10.16" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-09_Right_Angle.wrl</Path>
+					<Var>WF-09_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="25.4" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="10">
+			<Name>WF10R</Name>
+			<Value>WF10R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="3.1416" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="-0.825"/>
+						<Item X="12.7" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="7.375"/>
+						<Item X="11.43" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="-0.825"/>
+						<Item X="12.7" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-11.43" Y="7.375"/>
+						<Item X="11.43" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-10_Right_Angle.wrl</Path>
+					<Var>WF-10_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="27.94" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="11">
+			<Name>WF11R</Name>
+			<Value>WF11R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="-0.825"/>
+						<Item X="13.97" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="7.375"/>
+						<Item X="12.7" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="-0.825"/>
+						<Item X="13.97" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-12.7" Y="7.375"/>
+						<Item X="12.7" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-11_Right_Angle.wrl</Path>
+					<Var>WF-11_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="30.48" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="12">
+			<Name>WF12R</Name>
+			<Value>WF12R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="-0.825"/>
+						<Item X="15.24" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="7.375"/>
+						<Item X="13.97" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="-0.825"/>
+						<Item X="15.24" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-13.97" Y="7.375"/>
+						<Item X="13.97" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-12_Right_Angle.wrl</Path>
+					<Var>WF-12_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="33.02" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="13">
+			<Name>WF13R</Name>
+			<Value>WF13R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="-0.825"/>
+						<Item X="16.51" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="7.375"/>
+						<Item X="15.24" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="-0.825"/>
+						<Item X="16.51" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-15.24" Y="7.375"/>
+						<Item X="15.24" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-13_Right_Angle.wrl</Path>
+					<Var>WF-13_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="35.56" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="14">
+			<Name>WF14R</Name>
+			<Value>WF14R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="-0.825"/>
+						<Item X="17.78" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="7.375"/>
+						<Item X="16.51" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="-0.825"/>
+						<Item X="17.78" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-16.51" Y="7.375"/>
+						<Item X="16.51" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-14_Right_Angle.wrl</Path>
+					<Var>WF-14_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="38.1" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="15">
+			<Name>WF15R</Name>
+			<Value>WF15R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="-0.825"/>
+						<Item X="19.05" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="7.375"/>
+						<Item X="17.78" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="-0.825"/>
+						<Item X="19.05" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-17.78" Y="7.375"/>
+						<Item X="17.78" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-15_Right_Angle.wrl</Path>
+					<Var>WF-15_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="40.64" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="16">
+			<Name>WF16R</Name>
+			<Value>WF16R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="-0.825"/>
+						<Item X="20.32" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="7.375"/>
+						<Item X="19.05" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="-0.825"/>
+						<Item X="20.32" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-19.05" Y="7.375"/>
+						<Item X="19.05" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-16_Right_Angle.wrl</Path>
+					<Var>WF-16_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="43.18" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="17">
+			<Name>WF17R</Name>
+			<Value>WF17R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="20.32" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-20.32" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="-0.825"/>
+						<Item X="21.59" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="7.375"/>
+						<Item X="20.32" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="-0.825"/>
+						<Item X="21.59" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-20.32" Y="7.375"/>
+						<Item X="20.32" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-17_Right_Angle.wrl</Path>
+					<Var>WF-17_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="45.72" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="18">
+			<Name>WF18R</Name>
+			<Value>WF18R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="21.59" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-21.59" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="-0.825"/>
+						<Item X="22.86" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="7.375"/>
+						<Item X="21.59" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="-0.825"/>
+						<Item X="22.86" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-21.59" Y="7.375"/>
+						<Item X="21.59" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>C:\Users\alexa\Documents\DipTrace\My Libraries\3d_models\WFxx\WF-18_Right_Angle.wrl</Path>
+					<Var>C:\Users\alexa\Documents\DipTrace\My Libraries\3d_models\WFxx\WF-18_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="48.26" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="19">
+			<Name>WF19R</Name>
+			<Value>WF19R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="22.86" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="20.32" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="0" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-2.54" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-5.08" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-7.62" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-10.16" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-12.7" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-15.24" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-17.78" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-20.32" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-22.86" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>19</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="-0.825"/>
+						<Item X="24.13" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="7.375"/>
+						<Item X="22.86" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="-0.825"/>
+						<Item X="24.13" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-22.86" Y="7.375"/>
+						<Item X="22.86" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-19_Right_Angle.wrl</Path>
+					<Var>WF-19_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+		<Pattern RefDes="J" Mounting="None" Width="50.8" Height="14.75" Orientation="0" LockTypeChange="N" Type="Lines"
+				 Float1="2.54" Float2="7.62" Float3="0" Int1="1" Int2="20">
+			<Name>WF20R</Name>
+			<Value>WF20R</Value>
+			<Origin X="0" Y="-5.875" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+			<DefPad PadType="PadT0"/>
+			<Pads>
+				<Pad PadType="PadT0" Enabled="Y" X="24.13" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>1</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="21.59" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>2</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>3</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>4</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>5</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>6</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>7</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>8</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>9</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>10</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-1.27" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>11</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-3.81" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>12</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-6.35" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>13</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-8.89" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>14</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-11.43" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>15</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-13.97" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>16</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-16.51" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>17</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-19.05" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>18</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-21.59" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>19</Number>
+				</Pad>
+				<Pad PadType="PadT0" Enabled="Y" X="-24.13" Y="-5.875" Angle="0" Locked="N" Side="Top">
+					<Number>20</Number>
+				</Pad>
+			</Pads>
+			<Shapes>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="-0.825"/>
+						<Item X="25.4" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Silk" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="7.375"/>
+						<Item X="24.13" Y="-0.825"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-25.4" Y="-0.825"/>
+						<Item X="25.4" Y="-4.125"/>
+					</Points>
+				</Shape>
+				<Shape Type="Rectangle" Locked="N" Layer="Top Assy" AllLayers="N">
+					<Points>
+						<Item X="-24.13" Y="7.375"/>
+						<Item X="24.13" Y="-0.825"/>
+					</Points>
+				</Shape>
+			</Shapes>
+			<Dimensions/>
+			<Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="-5.875" AutoHeight="0"
+					 AutoColor="4934475" Type="File" KeepPins="N">
+				<Filename>
+					<Path>WF-20_Right_Angle.wrl</Path>
+					<Var>WF-20_Right_Angle.wrl</Var>
+				</Filename>
+				<Rotate X="0" Y="0" Z="0"/>
+				<Offset X="0" Y="0" Z="0"/>
+				<Zoom X="0.001" Y="0.001" Z="0.001"/>
+			</Model3D>
+		</Pattern>
+	</Patterns>
+</Library>

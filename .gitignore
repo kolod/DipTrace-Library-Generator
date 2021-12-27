@@ -1,0 +1,7 @@
+# Copyright 2021-... Oleksandr Kolodkin <alexandr.kolodkin@gmail.com>.
+# This program is distributed under the MIT license.
+# Glory to Ukraine!
+
+.idea
+venv
+*.xml
