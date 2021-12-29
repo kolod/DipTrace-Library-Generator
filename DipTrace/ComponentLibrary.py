@@ -65,6 +65,7 @@ class ComponentLibrary(DipTrace.Common):
 				self.add_components(component)
 		elif type(components) is DipTrace.Component:
 			self._get_first_or_new('Components').append(components.root)
+		return self
 
 	def save(self, filename: str):
 		with open(filename, 'w', encoding='utf-8') as datafile:

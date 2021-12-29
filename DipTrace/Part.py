@@ -42,7 +42,11 @@ class Part(DipTrace.Common):
 		self.part_name = part_name
 		self.value = value
 		self.origin = DipTrace.Origin()
+		self.spice_model = DipTrace.SpiceModel()
 		self._get_first_or_new('Category')
+		self._get_first_or_new('Pins')
+		self._get_first_or_new('Shapes')
+		self.pattern = ''
 
 	@property
 	def name(self) -> Optional[str]:
@@ -85,6 +89,14 @@ class Part(DipTrace.Common):
 		self.root.replace(self._get_first_or_new('Origin'), origin.root)
 
 	@property
+	def spice_model(self):
+		return DipTrace.SpiceModel().load(self.root.find('SpiceModel'))
+
+	@spice_model.setter
+	def spice_model(self, spice_model: DipTrace.SpiceModel):
+		self.root.replace(self._get_first_or_new('SpiceModel'), spice_model.root)
+
+	@property
 	def reference_designator(self) -> Optional[str]:
 		return self.root.get('RefDes')
 
@@ -97,8 +109,8 @@ class Part(DipTrace.Common):
 		return self.root.get('PartType')
 
 	@part_type.setter
-	def part_type(self, value: PartType):
-		self.root.attrib['PartType'] = value.value
+	def part_type(self, part_type: PartType):
+		self.root.attrib['PartType'] = part_type.value
 
 	@property
 	def style(self) -> Optional[Style]:
@@ -170,6 +182,7 @@ class Part(DipTrace.Common):
 				self.add_pins(pin)
 		elif type(pins) is DipTrace.Pin:
 			self._get_first_or_new('Pins').append(pins.root)
+		return self
 
 	def add_shapes(self, shapes):
 		if type(shapes) is list:
@@ -177,6 +190,7 @@ class Part(DipTrace.Common):
 				self.add_shapes(shape)
 		elif type(shapes) is DipTrace.Shape:
 			self._get_first_or_new('Shapes').append(shapes.root)
+		return self
 
 	def add_categories(self, categories):
 		if type(categories) is list:
@@ -184,6 +198,36 @@ class Part(DipTrace.Common):
 				self.add_categories(category)
 		elif type(categories) is str:
 			etree.SubElement(self._get_first_or_new('Category'), 'Name').text = categories
+		return self
+
+	def normalize(self):
+
+		# Find limits
+		min_x: float = 0.0
+		min_y: float = 0.0
+		max_x: float = 0.0
+		max_y: float = 0.0
+
+		for shape_tag in self.root.findall('.//Shapes/Shape'):
+			if shape_tag.get('Type') == DipTrace.Shape.ShapeType.Arc.value:
+				pass
+
+			else:
+				for point_tag in shape_tag.findall('.//Points/Item'):
+					if (x := point_tag.get('X') is not None) and (y := point_tag.get('Y') is not None):
+						if x > max_x:
+							max_x = x
+						if x < min_x:
+							min_x = x
+						if y > max_y:
+							max_y = y
+						if y < min_y:
+							min_y = y
+
+		width = max_x - min_x
+		height = max_y - min_y
+
+		return width, height
 
 
 if __name__ == "__main__":

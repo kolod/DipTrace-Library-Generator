@@ -18,6 +18,7 @@ class Component(DipTrace.Common):
 				self.add_parts(part)
 		elif type(parts) is DipTrace.Part:
 			self.root.append(parts.root)
+		return self
 
 
 if __name__ == "__main__":

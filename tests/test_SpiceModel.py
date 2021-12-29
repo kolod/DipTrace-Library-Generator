@@ -9,8 +9,8 @@ import unittest
 import DipTrace
 
 
-class TestNameFont(unittest.TestCase):
-
+class TestSpiceModel(unittest.TestCase):
 	def test_constructor(self):
-		self.assertEqual('<NameFont Size="5" Width="-2" Scale="1"/>\n', str(DipTrace.NameFont()))
-		self.assertEqual('<NameFont Size="10" Width="-3" Scale="0.8"/>\n', str(DipTrace.NameFont(10, -3, 0.8)))
+		expected = '<SpiceModel Type="SubCkt"/>\n'
+		actual = DipTrace.SpiceModel()
+		self.assertEqual(expected, str(actual))

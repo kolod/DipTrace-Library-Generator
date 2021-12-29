@@ -55,7 +55,3 @@ class TestPin(unittest.TestCase):
 		actual.name_orientation = 0
 
 		self.assertEqual(expected, str(actual))
-
-
-if __name__ == '__main__':
-	unittest.main()

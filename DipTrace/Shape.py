@@ -6,6 +6,8 @@
 # Glory to Ukraine!
 
 from enum import Enum
+from typing import List
+
 import DipTrace
 
 
@@ -13,7 +15,15 @@ class Shape(DipTrace.Common):
 
 	class ShapeType(Enum):
 		Line = 'Line'
+		Arrow = 'Arrow'
+		Arc = 'Arc'
+		Rectangle = 'Rectangle'
+		FillRect = 'FillRect'
+		Obround = 'Obround'
+		FillObround = 'FillObround'
 		Polyline = 'Polyline'
+		Polygon = 'Polygon'
+		Text = 'Text'
 
 	def __init__(self, shape_type: ShapeType = ShapeType.Line, width: float = 0.25):
 		super().__init__('Shape')
@@ -60,6 +70,7 @@ class Shape(DipTrace.Common):
 				self.add_points(point)
 		elif type(points) is DipTrace.Point:
 			self._get_first_or_new('Points').append(points.root)
+		return self
 
 
 if __name__ == "__main__":

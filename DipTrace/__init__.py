@@ -8,6 +8,7 @@
 
 from .Common import *
 from .NameFont import NameFont
+from .SpiceModel import SpiceModel
 from .ComponentLibrary import ComponentLibrary
 from .Origin import Origin
 from .Shape import Shape

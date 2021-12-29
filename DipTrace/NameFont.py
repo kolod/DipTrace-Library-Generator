@@ -40,12 +40,6 @@ class NameFont(DipTrace.Common):
 	def scale(self, scale: float):
 		self.root.attrib['Scale'] = str(scale)
 
-	def load(self, xml: etree):
-		if xml is etree:
-			if xml.tag is NameFont:
-				self.root = xml
-		return self
-
 
 if __name__ == "__main__":
 	pass

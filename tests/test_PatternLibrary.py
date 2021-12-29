@@ -41,7 +41,3 @@ class TestDipTracePatternLibrary(unittest.TestCase):
 		self.assertEqual('mm', self.x.units)
 		self.assertEqual('mil', self.y.units)
 		self.assertEqual('mil', self.z.units)
-
-
-if __name__ == '__main__':
-	unittest.main()

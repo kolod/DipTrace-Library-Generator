@@ -42,7 +42,3 @@ class TestCommon(unittest.TestCase):
 	def test_from_bool(self):
 		self.assertEqual('Y', DipTrace.from_bool(True))
 		self.assertEqual('N', DipTrace.from_bool(False))
-
-
-if __name__ == '__main__':
-	unittest.main()

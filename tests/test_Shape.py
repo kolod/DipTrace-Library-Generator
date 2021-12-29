@@ -53,8 +53,3 @@ class TestShape(unittest.TestCase):
 		])
 
 		self.assertEqual(expected, str(actual))
-
-
-if __name__ == '__main__':
-	unittest.main()
-

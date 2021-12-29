@@ -23,7 +23,3 @@ class TestPoint(unittest.TestCase):
 		self.assertEqual('<Item X="0" Y="0"/>\n', str(self.x))
 		self.assertEqual('<Item X="10" Y="20"/>\n', str(self.y))
 		self.assertEqual('<Item X="10.5" Y="20.5"/>\n', str(self.z))
-
-
-if __name__ == '__main__':
-	unittest.main()

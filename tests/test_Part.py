@@ -18,7 +18,11 @@ class TestPart(unittest.TestCase):
 			'  <PartName>Part 1</PartName>\n' \
 			'  <Value>5 V</Value>\n' \
 			'  <Origin X="0" Y="0"/>\n' \
+			'  <SpiceModel Type="SubCkt"/>\n' \
 			'  <Category/>\n' \
+			'  <Pins/>\n' \
+			'  <Shapes/>\n' \
+			'  <Pattern PatternType=""/>\n' \
 			'</Part>\n'
 
 		actual = DipTrace.Part(name='SMAJ5.0A', ref='D', value='5 V')
@@ -35,6 +39,7 @@ class TestPart(unittest.TestCase):
 			'  <PartName>Part 1</PartName>\n' \
 			'  <Value>5 V</Value>\n' \
 			'  <Origin X="0" Y="0"/>\n' \
+			'  <SpiceModel Type="SubCkt"/>\n' \
 			'  <Category/>\n' \
 			'  <Pins>\n' \
 			'    <Pin X="0" Y="0" Enabled="Y" Locked="N" Type="Default" ElectricType="Undefined" ' \
@@ -45,6 +50,8 @@ class TestPart(unittest.TestCase):
 			'      <NameFont Size="5" Width="-2" Scale="1"/>\n' \
 			'    </Pin>\n' \
 			'  </Pins>\n' \
+			'  <Shapes/>\n' \
+			'  <Pattern PatternType=""/>\n' \
 			'</Part>\n'
 
 		actual = DipTrace.Part(name='SMAJ5.0A', ref='D', value='5 V')
@@ -54,6 +61,16 @@ class TestPart(unittest.TestCase):
 
 		self.assertEqual(expected, str(actual))
 
+	def test_normalize(self):
+		part = DipTrace.Part('normalize', 'n').add_shapes([
+			DipTrace.Shape().add_points([
+				DipTrace.Point(-2.54, -1.27),
+				DipTrace.Point(2.54, 1.27)
+			])
+		])
 
-if __name__ == '__main__':
-	unittest.main()
+		print(str(part))
+
+		expected = (5.08, 2.54)
+		actual = part.normalize()
+		self.assertEqual(expected, actual)

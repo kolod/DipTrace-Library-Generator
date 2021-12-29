@@ -29,7 +29,10 @@ def to_float(value: str, default: float = 0.0) -> float:
 
 
 def from_float(value: float) -> str:
-	return f'{value:.5g}' #.rstrip('0').rstrip('.')
+	if value >= 1 or value < 0:
+		return f'{value:.5g}'
+	else:
+		return f'{value:.4g}'
 
 
 def to_bool(val: str) -> bool:
@@ -66,6 +69,12 @@ class Common(object):
 	@root.setter
 	def root(self, element: etree):
 		self.__root = element
+
+	def load(self, xml: etree):
+		if xml is etree:
+			if xml.tag == self.root.tag:
+				self.root = xml
+		return self
 
 	def _get_first_text_or_default(self, tag: str, default: str = '') -> str:
 		x = self.__root.find(tag)

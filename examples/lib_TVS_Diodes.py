@@ -1,15 +1,15 @@
-#!/usr/'bi'n/python3
+#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-# Copyright 2021 Oleksandr Kolodkin <alexandr.kolodkin@gmail.com>.
+# Copyright 2021-... Oleksandr Kolodkin <alexandr.kolodkin@gmail.com>.
 # This program is distributed under the MIT license.
+# Glory to Ukraine!
 
 import math
 from typing import List
 import DipTrace
 
-
-_data = [
+data = [
 	{'uni': 'SMAJ5.0A', 'bi': 'SMAJ5.0CA', 'voltage': 5.0},
 	{'uni': 'SMAJ6.0A', 'bi': 'SMAJ6.0CA', 'voltage': 6.0},
 	{'uni': 'SMAJ6.5A', 'bi': 'SMAJ6.5CA', 'voltage': 6.5},
@@ -67,8 +67,7 @@ _data = [
 ]
 
 
-def _pin() -> List[DipTrace.Pin]:
-
+def pin() -> List[DipTrace.Pin]:
 	pin_1 = DipTrace.Pin('1', '1', 2.54, 0)
 	pin_1.orientation = 180.0
 	pin_1.length = 2.54
@@ -81,7 +80,7 @@ def _pin() -> List[DipTrace.Pin]:
 	return [pin_1, pin_2]
 
 
-def _pin_shape_uni() -> List[DipTrace.Shape]:
+def pin_shape_uni() -> List[DipTrace.Shape]:
 	x = 1.27 * math.sin(math.radians(60.0))
 
 	shape_1 = DipTrace.Shape()
@@ -109,7 +108,7 @@ def _pin_shape_uni() -> List[DipTrace.Shape]:
 	return [shape_1, shape_2, shape_3]
 
 
-def _pin_shape_bi() -> List[DipTrace.Shape]:
+def pin_shape_bi() -> List[DipTrace.Shape]:
 	x = 2.54 * math.sin(math.radians(60.0))
 
 	shape_1 = DipTrace.Shape()
@@ -140,15 +139,16 @@ def _pin_shape_bi() -> List[DipTrace.Shape]:
 	return [shape_1, shape_2, shape_3]
 
 
-def _component_tvs_uni() -> List[DipTrace.Component]:
+def component_tvs_uni() -> List[DipTrace.Component]:
 	result = []
 
-	for data in _data:
+	for data in data:
 		part = DipTrace.Part(name=data['uni'], ref='D')
 		part.value = f'{data["voltage"]:.5g} V'
-		part.add_pins(_pin())
-		part.add_shapes(_pin_shape_uni())
+		part.add_pins(pin())
+		part.add_shapes(pin_shape_uni())
 		part.add_categories('Connectors')
+		part.pattern = 'PatType1'
 		component = DipTrace.Component()
 		component.add_parts(part)
 		result.append(component)
@@ -156,29 +156,33 @@ def _component_tvs_uni() -> List[DipTrace.Component]:
 	return result
 
 
-def _component_tvs_bi() -> List[DipTrace.Component]:
+def component_tvs_bi() -> List[DipTrace.Component]:
 	result = []
 
-	for data in _data:
-		part = DipTrace.Part(name=data['bi'], ref='D')
-		part.value = f'{data["voltage"]:.5g} V'
-		part.add_pins(_pin())
-		part.add_shapes(_pin_shape_bi())
-		component = DipTrace.Component()
-		component.add_parts(part)
+	for data in data:
+		part = DipTrace.Part(
+			name=data['bi'],
+			ref='D',
+			value=f'{data["voltage"]:.5g} V'
+		).add_categories(
+			'Connectors'
+		).add_pins(
+			pin()
+		).add_shapes(
+			pin_shape_bi()
+		)
+		part.pattern = 'PatType2'
+		component = DipTrace.Component().add_parts(part)
 		result.append(component)
 
 	return result
 
 
 def run() -> None:
-	lib = DipTrace.ComponentLibrary()
-	lib.name = 'Diodes TVS'
-
-	lib.add_components(_component_tvs_uni())
-	lib.add_components(_component_tvs_bi())
-
-	lib.save('../Diodes TVS.component.xml')
+	DipTrace.ComponentLibrary('Diodes TVS').add_components([
+		component_tvs_uni(),
+		component_tvs_bi()
+	]).save('../Diodes TVS.component.xml')
 
 
 if __name__ == "__main__":
