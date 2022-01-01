@@ -11,7 +11,7 @@ from enum import Enum
 import DipTrace
 
 
-class PadType(DipTrace.Common):
+class PadType(DipTrace.Base):
 	class HoleType(Enum):
 		Round = 'Round'
 		Obround = 'Obround'
@@ -25,37 +25,37 @@ class PadType(DipTrace.Common):
 
 	def __init__(self, name: str = ''):
 		super().__init__('PadType')
-		self.__root.attrib['Name'] = name
+		self.root.attrib['Name'] = name
 
 	@property
 	def name(self) -> Optional[str]:
-		return self.__root.get("Name")
+		return self.root.get("Name")
 
 	@name.setter
 	def name(self, name: str):
-		self.__root.attrib['Name'] = name
+		self.root.attrib['Name'] = name
 
 	@property
 	def hole_type(self) -> Optional[HoleType]:
-		value = self.__root.get("HoleType")
+		value = self.root.get("HoleType")
 		return self.HoleType[value]
 
 	@hole_type.setter
 	def hole_type(self, hole_type: HoleType):
-		self.__root.attrib['HoleType'] = hole_type.name
+		self.root.attrib['HoleType'] = hole_type.name
 
 	@property
-	def side(self) -> Optional[DipTrace.Common.Side]:
-		return self.__root.get("Side")
+	def side(self) -> Optional[DipTrace.Side]:
+		return self.root.get("Side")
 
 	@side.setter
-	def side(self, side: DipTrace.Common.Side):
-		self.__root.attrib['Side'] = side.name
+	def side(self, side: DipTrace.Side):
+		self.root.attrib['Side'] = side.name
 
 	@property
 	def hole(self) -> Optional[float]:
 		try:
-			return float(self.__root.get("Hole"))
+			return float(self.root.get("Hole"))
 		except ValueError:
 			return None
 

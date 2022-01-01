@@ -11,15 +11,16 @@ import DipTrace
 
 class TestPoint(unittest.TestCase):
 
-	def __init__(self, *args, **kwargs):
-		self.x = DipTrace.Point()
-		self.y = DipTrace.Point(10.0, 20.0)
-		self.z = DipTrace.Point()
-		self.z.x = 10.5
-		self.z.y = 20.5
-		super().__init__(*args, **kwargs)
+	def test_point_1(self):
+		x = DipTrace.Point()
+		self.assertEqual('<Item X="0" Y="0"/>\n', str(x))
 
-	def test_point(self):
-		self.assertEqual('<Item X="0" Y="0"/>\n', str(self.x))
-		self.assertEqual('<Item X="10" Y="20"/>\n', str(self.y))
-		self.assertEqual('<Item X="10.5" Y="20.5"/>\n', str(self.z))
+	def test_point_2(self):
+		y = DipTrace.Point(x=10.0, y=20.0)
+		self.assertEqual('<Item X="10" Y="20"/>\n', str(y))
+
+	def test_point_3(self):
+		z = DipTrace.Point()
+		z.x = 10.5
+		z.y = 20.5
+		self.assertEqual('<Item X="10.5" Y="20.5"/>\n', str(z))

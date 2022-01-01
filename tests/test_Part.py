@@ -25,7 +25,7 @@ class TestPart(unittest.TestCase):
 			'  <Pattern PatternType=""/>\n' \
 			'</Part>\n'
 
-		actual = DipTrace.Part(name='SMAJ5.0A', ref='D', value='5 V')
+		actual = DipTrace.Part(name='SMAJ5.0A', reference='D', value='5 V')
 		actual.width = 5.08
 		actual.height = 2.54
 
@@ -42,9 +42,9 @@ class TestPart(unittest.TestCase):
 			'  <SpiceModel Type="SubCkt"/>\n' \
 			'  <Category/>\n' \
 			'  <Pins>\n' \
-			'    <Pin X="0" Y="0" Enabled="Y" Locked="N" Type="Default" ElectricType="Undefined" ' \
+			'    <Pin X="0" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" ' \
 			'Orientation="0" PadIndex="1" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" ' \
-			'NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">\n' \
+			'NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0" Group="0">\n' \
 			'      <Name></Name>\n' \
 			'      <PadNumber></PadNumber>\n' \
 			'      <NameFont Size="5" Width="-2" Scale="1"/>\n' \
@@ -54,23 +54,30 @@ class TestPart(unittest.TestCase):
 			'  <Pattern PatternType=""/>\n' \
 			'</Part>\n'
 
-		actual = DipTrace.Part(name='SMAJ5.0A', ref='D', value='5 V')
-		actual.width = 5.08
-		actual.height = 2.54
-		actual.add_pins([DipTrace.Pin()])
+		actual = DipTrace.Part(
+			name='SMAJ5.0A',
+			reference='D',
+			value='5 V',
+			width=5.08,
+			height=2.54,
+			pins=[DipTrace.Pin()]
+		)
 
 		self.assertEqual(expected, str(actual))
 
 	def test_normalize(self):
-		part = DipTrace.Part('normalize', 'n').add_shapes([
-			DipTrace.Shape().add_points([
-				DipTrace.Point(-2.54, -1.27),
-				DipTrace.Point(2.54, 1.27)
-			])
-		])
-
-		print(str(part))
-
-		expected = (5.08, 2.54)
-		actual = part.normalize()
+		part = DipTrace.Part(
+			name='normalize',
+			reference='n',
+			shapes=[
+				DipTrace.Shape(
+					points=[
+						DipTrace.Point(x=-2.54, y=-1.27),
+						DipTrace.Point(x=2.54, y=1.27)
+					]
+				)
+			]
+		).normalize()
+		expected = 5.08, 2.54
+		actual = part.width, part.height
 		self.assertEqual(expected, actual)

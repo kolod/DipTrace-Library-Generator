@@ -22,6 +22,16 @@ class TestDipTracePatternLibrary(unittest.TestCase):
 		self.z.version = '5.0'
 		super().__init__(*args, **kwargs)
 
+	def test_constructor(self):
+		expected = '<Library Type="DipTrace-PatternLibrary" Version="4.2.0.1" Units="mm" Name="" Hint=""/>\n'
+		actual = DipTrace.PatternLibrary()
+		self.assertEqual(expected, str(actual))
+
+#	def test_load(self):
+#		expected = '<Library Type="DipTrace-PatternLibrary" Version="4.2.0.1" Units="mm" Name="" Hint=""/>\n'
+#		actual = DipTrace.PatternLibrary().load('../samples/Diodes TVS.patterns.xml')
+#		self.assertEqual(expected, str(actual))
+
 	def test_name(self):
 		self.assertEqual('', self.x.name)
 		self.assertEqual('LIB', self.y.name)

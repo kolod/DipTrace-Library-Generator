@@ -12,30 +12,39 @@ import DipTrace
 class TestShape(unittest.TestCase):
 
 	def test_constructor(self):
-		expected = '<Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y"/>\n'
+		expected = \
+			'<Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">\n' \
+			'  <Points/>\n' \
+			'</Shape>\n'
 		actual = DipTrace.Shape()
 		self.assertEqual(expected, str(actual))
 
 	def test_line(self):
 		expected = \
-			'<Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y">\n' \
+			'<Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">\n' \
 			'  <Points>\n' \
 			'    <Item X="-2.54" Y="0"/>\n' \
 			'    <Item X="2.54" Y="0"/>\n' \
 			'  </Points>\n' \
 			'</Shape>\n'
 
-		actual = DipTrace.Shape()
-		actual.add_points([
-			DipTrace.Point(-2.54, 0),
-			DipTrace.Point(2.54, 0)
-		])
+		actual = DipTrace.Shape(
+			points=[
+				DipTrace.Point(x=-2.54, y=0),
+				DipTrace.Point(x=2.54, y=0)
+			]
+		)
 
 		self.assertEqual(expected, str(actual))
+		self.assertEqual(DipTrace.ShapeType.Line, actual.shape_type)
+		self.assertEqual(0.25, actual.width)
+		self.assertEqual(True, actual.enabled)
+		self.assertEqual(True, actual.locked)
+		self.assertEqual(0, actual.group)
 
 	def test_polyline(self):
 		expected = \
-			'<Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y">\n' \
+			'<Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">\n' \
 			'  <Points>\n' \
 			'    <Item X="-1.0999" Y="1.27"/>\n' \
 			'    <Item X="1.0999" Y="0"/>\n' \
@@ -44,12 +53,14 @@ class TestShape(unittest.TestCase):
 			'  </Points>\n' \
 			'</Shape>\n'
 
-		actual = DipTrace.Shape(shape_type=DipTrace.Shape.ShapeType.Polyline)
-		actual.add_points([
-			DipTrace.Point(-1.0999, 1.27),
-			DipTrace.Point(1.0999, 0),
-			DipTrace.Point(-1.0999, -1.27),
-			DipTrace.Point(-1.0999, 1.27)
-		])
+		actual = DipTrace.Shape(
+			shape_type=DipTrace.ShapeType.Polyline,
+			points=[
+				DipTrace.Point(x=-1.0999, y=1.27),
+				DipTrace.Point(x=1.0999, y=0),
+				DipTrace.Point(x=-1.0999, y=-1.27),
+				DipTrace.Point(x=-1.0999, y=1.27)
+			]
+		)
 
 		self.assertEqual(expected, str(actual))

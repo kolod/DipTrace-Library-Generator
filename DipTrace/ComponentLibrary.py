@@ -9,14 +9,15 @@ from typing import Optional
 import DipTrace
 
 
-class ComponentLibrary(DipTrace.Common):
-	def __init__(self, name: str = '', hint: str = '', units: str = 'mm'):
-		super().__init__('Library')
-		self.root.attrib['Type'] = 'DipTrace-ComponentLibrary'
-		self.name = name
-		self.hint = hint
-		self.version = '4.2.0.1'
-		self.units = units
+class ComponentLibrary(DipTrace.LibraryMixin):
+	defaults = {
+		'type': 'DipTrace-ComponentLibrary',
+		'name': '',
+		'hint': '',
+		'version': '4.2.0.1',
+		'units': 'mm',
+		'pattern_library': DipTrace.PatternLibrary(),
+	}
 
 	@property
 	def name(self) -> Optional[str]:
@@ -36,7 +37,7 @@ class ComponentLibrary(DipTrace.Common):
 
 	@property
 	def version(self) -> Optional[str]:
-		return self.__root.get("Version")
+		return self.root.get("Version")
 
 	@version.setter
 	def version(self, version: str):
@@ -57,7 +58,8 @@ class ComponentLibrary(DipTrace.Common):
 
 	@pattern_library.setter
 	def pattern_library(self, library):
-		self._get_first_or_new('Library').insert(library.root)
+		print(str(library))
+		self.root.replace(self._get_first_or_new('Library'), library.root)
 
 	def add_components(self, components):
 		if type(components) is list:

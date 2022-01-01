@@ -5,8 +5,5 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-import DipTrace
 
-
-class Origin(DipTrace.PointMixin):
-	tag = 'Origin'
+from .Utils import *

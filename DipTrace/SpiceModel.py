@@ -5,28 +5,19 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-from enum import Enum
-from lxml import etree
 import DipTrace
 
 
-class SpiceModel(DipTrace.Common):
-
-	class ModelType(Enum):
-		SubCkt = 'SubCkt'
-
-	def __init__(self, model_type=ModelType.SubCkt):
-		super().__init__('SpiceModel')
-		self.model_type = model_type
+class SpiceModel(DipTrace.Base):
+	tag = 'SpiceModel'
+	defaults = {
+		'model_type': DipTrace.SpiceModelType.SubCkt,
+	}
 
 	@property
-	def model_type(self):
-		return self.root.get('Type')
+	def model_type(self) -> DipTrace.SpiceModelType:
+		return DipTrace.SpiceModelType.from_str(self.root.get('Type'))
 
 	@model_type.setter
-	def model_type(self, model_type: ModelType):
+	def model_type(self, model_type: DipTrace.SpiceModelType):
 		self.root.attrib['Type'] = model_type.value
-
-
-if __name__ == "__main__":
-	pass

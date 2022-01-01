@@ -5,61 +5,39 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-from enum import Enum
 from typing import Optional, Union
 import DipTrace
 
 
-class Pin(DipTrace.CommonCoordinates):
-	class ElectricType(Enum):
-		Undefined = 'Undefined'
-		Passive = 'Passive'
-		Input = 'Input'
-		Output = 'Output'
-		Bidirectional = 'Bidirectional'
-		OpenHigh = 'Open High'
-		OpenLow = 'Open Low'
-		PassiveHigh = 'Passive High'
-		PassiveLow = 'Passive Low'
-		ThreeState = '3 State'
-		Power = 'Power'
-
-	class PinType(Enum):
-		Default = 'Default'
-		Dot = 'Dot'
-		PolarityIn = 'Polarity In'
-		PolarityOut = 'Polarity Out'
-		NonLogic = 'Non Logic'
-		Open = 'Open'
-		OpenHigh = 'Open High'
-		ThreeState = '3 State'
-		Hysteresis = 'Hysteresis'
-		Amplifier = 'Amplifier'
-		Postponed = 'Postponed'
-		Shift = 'Shift'
-		Clock = 'Clock'
-		Generator = 'Generator'
-
-	def __init__(self, name: str = '', number: str = '', x: float = 0.0, y: float = 0.0):
-		super().__init__('Pin', x, y)
-		self.name = name
-		self.number = number
-		self.enabled = True
-		self.locked = False
-		self.pin_type = self.PinType.Default
-		self.electric_type = self.ElectricType.Undefined
-		self.orientation = 0
-		self.pad_index = 1
-		self.length = 2.54
-		self.show_name = False
-		self.number_x_shift = 0
-		self.number_y_shift = 0
-		self.name_x_shift = 0
-		self.name_y_shift = 0
-		self.signal_delay = 0
-		self.number_orientation = 0
-		self.name_orientation = 0
-		self.font = DipTrace.NameFont()
+class Pin(
+	DipTrace.LockedMixin,
+	DipTrace.EnabledMixin,
+	DipTrace.PointMixin,
+	DipTrace.GroupMixin,
+):
+	tag = 'Pin'
+	defaults = {
+		**DipTrace.PointMixin.defaults,
+		**DipTrace.EnabledMixin.defaults,
+		**DipTrace.LockedMixin.defaults,
+		'name': '',
+		'number': '',
+		'pin_type': DipTrace.PinType.Default,
+		'electric_type': DipTrace.ElectricType.Undefined,
+		'orientation': 0,
+		'pad_index': 1,
+		'length': 2.54,
+		'show_name': False,
+		'number_x_shift': 0,
+		'number_y_shift': 0,
+		'name_x_shift': 0,
+		'name_y_shift': 0,
+		'signal_delay': 0,
+		'number_orientation': 0,
+		'name_orientation': 0,
+		**DipTrace.GroupMixin.defaults,
+		'font': DipTrace.NameFont(),
+	}
 
 	@property
 	def name(self) -> Optional[str]:
@@ -78,36 +56,20 @@ class Pin(DipTrace.CommonCoordinates):
 		self._set_first_text('PadNumber', str(number))
 
 	@property
-	def electric_type(self) -> Optional[ElectricType]:
-		return self.root.get("ElectricType")
-
-	@electric_type.setter
-	def electric_type(self, electric_type: ElectricType):
-		self.root.attrib['ElectricType'] = electric_type.name
-
-	@property
-	def pin_type(self) -> Optional[PinType]:
-		return self.root.get("Type")
+	def pin_type(self) -> DipTrace.PinType:
+		return DipTrace.PinType.from_str(self.root.get("Type"))
 
 	@pin_type.setter
-	def pin_type(self, pin_type: PinType):
-		self.root.attrib['Type'] = pin_type.name
+	def pin_type(self, pin_type: DipTrace.PinType):
+		self.root.attrib['Type'] = pin_type.value
 
 	@property
-	def enabled(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('Enabled'))
+	def electric_type(self) -> DipTrace.ElectricType:
+		return DipTrace.ElectricType.from_str(self.root.get("ElectricType"))
 
-	@enabled.setter
-	def enabled(self, state: bool):
-		self.root.attrib['Enabled'] = DipTrace.from_bool(state)
-
-	@property
-	def locked(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('Locked'))
-
-	@locked.setter
-	def locked(self, state: bool):
-		self.root.attrib['Locked'] = DipTrace.from_bool(state)
+	@electric_type.setter
+	def electric_type(self, electric_type: DipTrace.ElectricType):
+		self.root.attrib['ElectricType'] = electric_type.value
 
 	@property
 	def show_name(self) -> bool:
@@ -118,8 +80,8 @@ class Pin(DipTrace.CommonCoordinates):
 		self.root.attrib['ShowName'] = DipTrace.from_bool(state)
 
 	@property
-	def font(self):
-		return DipTrace.NameFont().load(self.root.find('NameFont'))
+	def font(self) -> DipTrace.NameFont:
+		return DipTrace.NameFont(root=self.root.find('NameFont'))
 
 	@font.setter
 	def font(self, font: DipTrace.NameFont):
@@ -204,7 +166,3 @@ class Pin(DipTrace.CommonCoordinates):
 	@signal_delay.setter
 	def signal_delay(self, value: float):
 		self.root.attrib['SignalDelay'] = DipTrace.from_float(value * 3.0)
-
-
-if __name__ == "__main__":
-	pass

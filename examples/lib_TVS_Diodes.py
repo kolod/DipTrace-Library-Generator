@@ -5,9 +5,9 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
+import DipTrace
 import math
 from typing import List
-import DipTrace
 
 data = [
 	{'uni': 'SMAJ5.0A', 'bi': 'SMAJ5.0CA', 'voltage': 5.0},
@@ -67,88 +67,111 @@ data = [
 ]
 
 
-def pin() -> List[DipTrace.Pin]:
-	pin_1 = DipTrace.Pin('1', '1', 2.54, 0)
-	pin_1.orientation = 180.0
-	pin_1.length = 2.54
-
-	pin_2 = DipTrace.Pin('2', '2', -2.54, 0)
-	pin_2.orientation = 0.0
-	pin_2.length = 2.54
-	pin_2.pad_index = 2
-
-	return [pin_1, pin_2]
+def pins() -> List[DipTrace.Pin]:
+	return [
+		DipTrace.Pin(
+			name='1',
+			number='1',
+			x=2.54,
+			y=0,
+			orientation=180.0,
+			length=2.54,
+			font=DipTrace.NameFont()
+		),
+		DipTrace.Pin(
+			name='2',
+			number='2',
+			x=-2.54,
+			y=0,
+			orientation=0.0,
+			length=2.54,
+			pad_index=2,
+			font=DipTrace.NameFont()
+		),
+	]
 
 
 def pin_shape_uni() -> List[DipTrace.Shape]:
 	x = 1.27 * math.sin(math.radians(60.0))
 
-	shape_1 = DipTrace.Shape()
-	shape_1.add_points([
-		DipTrace.Point(x=-2.54, y=0.0),
-		DipTrace.Point(x=2.54, y=0.0),
-	])
-
-	shape_2 = DipTrace.Shape(DipTrace.Shape.ShapeType.Polyline)
-	shape_2.add_points([
-		DipTrace.Point(x=-x, y=1.27),
-		DipTrace.Point(x=x, y=0.00),
-		DipTrace.Point(x=-x, y=-1.27),
-		DipTrace.Point(x=-x, y=1.27)
-	])
-
-	shape_3 = DipTrace.Shape(DipTrace.Shape.ShapeType.Polyline)
-	shape_3.add_points([
-		DipTrace.Point(x=x + 1.27 / 2, y=1.27),
-		DipTrace.Point(x=x, y=1.27),
-		DipTrace.Point(x=x, y=-1.27),
-		DipTrace.Point(x=x - 1.27 / 2, y=-1.27)
-	])
-
-	return [shape_1, shape_2, shape_3]
+	return [
+		DipTrace.Shape(
+			points=[
+				DipTrace.Point(x=-2.54, y=0.0),
+				DipTrace.Point(x=2.54, y=0.0),
+			]
+		),
+		DipTrace.Shape(
+			shape_type=DipTrace.ShapeType.Polyline,
+			points=[
+				DipTrace.Point(x=-x, y=1.27),
+				DipTrace.Point(x=x, y=0.00),
+				DipTrace.Point(x=-x, y=-1.27),
+				DipTrace.Point(x=-x, y=1.27)
+			]
+		),
+		DipTrace.Shape(
+			shape_type=DipTrace.ShapeType.Polyline,
+			points=[
+				DipTrace.Point(x=x + 1.27 / 2, y=1.27),
+				DipTrace.Point(x=x, y=1.27),
+				DipTrace.Point(x=x, y=-1.27),
+				DipTrace.Point(x=x - 1.27 / 2, y=-1.27)
+			]
+		)
+	]
 
 
 def pin_shape_bi() -> List[DipTrace.Shape]:
 	x = 2.54 * math.sin(math.radians(60.0))
 
-	shape_1 = DipTrace.Shape()
-	shape_1.add_points([
-		DipTrace.Point(x=-2.54, y=0.0),
-		DipTrace.Point(x=2.54, y=0.0),
-	])
-
-	shape_2 = DipTrace.Shape(DipTrace.Shape.ShapeType.Polyline)
-	shape_2.add_points([
-		DipTrace.Point(x=0.0, y=0.0),
-		DipTrace.Point(x=-x, y=1.27),
-		DipTrace.Point(x=-x, y=-1.27),
-		DipTrace.Point(x=0.0, y=0.0),
-		DipTrace.Point(x=x, y=1.27),
-		DipTrace.Point(x=x, y=-1.27),
-		DipTrace.Point(x=0.0, y=0.0)
-	])
-
-	shape_3 = DipTrace.Shape(DipTrace.Shape.ShapeType.Polyline)
-	shape_3.add_points([
-		DipTrace.Point(x=1.27 / 2, y=1.27),
-		DipTrace.Point(x=0, y=1.27),
-		DipTrace.Point(x=0, y=-1.27),
-		DipTrace.Point(x=-1.27 / 2, y=-1.27)
-	])
-
-	return [shape_1, shape_2, shape_3]
+	return [
+		DipTrace.Shape(
+			points=[
+				DipTrace.Point(x=-2.54, y=0.0),
+				DipTrace.Point(x=2.54, y=0.0),
+			]
+		),
+		DipTrace.Shape(
+			shape_type=DipTrace.ShapeType.Polyline,
+			points=[
+				DipTrace.Point(x=0.0, y=0.0),
+				DipTrace.Point(x=-x, y=1.27),
+				DipTrace.Point(x=-x, y=-1.27),
+				DipTrace.Point(x=0.0, y=0.0),
+				DipTrace.Point(x=x, y=1.27),
+				DipTrace.Point(x=x, y=-1.27),
+				DipTrace.Point(x=0.0, y=0.0)
+			]
+		),
+		DipTrace.Shape(
+			shape_type=DipTrace.ShapeType.Polyline,
+			points=[
+				DipTrace.Point(x=1.27 / 2, y=1.27),
+				DipTrace.Point(x=0, y=1.27),
+				DipTrace.Point(x=0, y=-1.27),
+				DipTrace.Point(x=-1.27 / 2, y=-1.27)
+			]
+		)
+	]
 
 
 def component_tvs_uni() -> List[DipTrace.Component]:
 	result = []
 
-	for data in data:
-		part = DipTrace.Part(name=data['uni'], ref='D')
-		part.value = f'{data["voltage"]:.5g} V'
-		part.add_pins(pin())
-		part.add_shapes(pin_shape_uni())
-		part.add_categories('Connectors')
-		part.pattern = 'PatType1'
+	for d in data:
+		part = DipTrace.Part(
+			name=d['uni'],
+			reference='D',
+			value=f'{d["voltage"]:.5g} V',
+			categories=('Diodes',),
+			shapes=pin_shape_uni(),
+			pins=pins(),
+			pattern='PatType0',
+			origin=DipTrace.Origin(),
+			spice_model=DipTrace.SpiceModel()
+		)
+
 		component = DipTrace.Component()
 		component.add_parts(part)
 		result.append(component)
@@ -159,31 +182,43 @@ def component_tvs_uni() -> List[DipTrace.Component]:
 def component_tvs_bi() -> List[DipTrace.Component]:
 	result = []
 
-	for data in data:
+	for d in data:
 		part = DipTrace.Part(
-			name=data['bi'],
-			ref='D',
-			value=f'{data["voltage"]:.5g} V'
-		).add_categories(
-			'Connectors'
-		).add_pins(
-			pin()
-		).add_shapes(
-			pin_shape_bi()
+			name=d['bi'],
+			reference='D',
+			value=f'{d["voltage"]:.5g} V',
+			categories=('Diodes',),
+			shapes=pin_shape_bi(),
+			pins=pins(),
+			pattern='PatType0',
+			origin=DipTrace.Origin(),
+			spice_model=DipTrace.SpiceModel()
 		)
-		part.pattern = 'PatType2'
+
+		part.pattern = 'PatType1'
 		component = DipTrace.Component().add_parts(part)
 		result.append(component)
 
 	return result
 
 
-def run() -> None:
-	DipTrace.ComponentLibrary('Diodes TVS').add_components([
+def run(filename: str, patterns_library: str) -> None:
+	DipTrace.ComponentLibrary(
+		name='Diodes TVS',
+		pattern_library=DipTrace.PatternLibrary().load(patterns_library)
+	).add_components([
 		component_tvs_uni(),
 		component_tvs_bi()
-	]).save('../Diodes TVS.component.xml')
+	]).save(filename)
 
 
 if __name__ == "__main__":
-	run()
+	patterns = '../samples/Diodes TVS.patterns.xml'
+	actual = '../samples/Diodes TVS.component.xml'
+	expected = '../tvs.xml'
+
+	DipTrace.format_xml(patterns)
+	run(actual, patterns)
+	DipTrace.format_xml(actual)
+	DipTrace.format_xml(expected)
+	DipTrace.compare(expected, actual)

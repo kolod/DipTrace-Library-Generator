@@ -4,40 +4,28 @@
 # Copyright 2021 Oleksandr Kolodkin <alexandr.kolodkin@gmail.com>.
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
-
-from enum import Enum
-from typing import List
+from typing import Tuple
 
 import DipTrace
 
 
-class Shape(DipTrace.Common):
-
-	class ShapeType(Enum):
-		Line = 'Line'
-		Arrow = 'Arrow'
-		Arc = 'Arc'
-		Rectangle = 'Rectangle'
-		FillRect = 'FillRect'
-		Obround = 'Obround'
-		FillObround = 'FillObround'
-		Polyline = 'Polyline'
-		Polygon = 'Polygon'
-		Text = 'Text'
-
-	def __init__(self, shape_type: ShapeType = ShapeType.Line, width: float = 0.25):
-		super().__init__('Shape')
-		self.shape_type = shape_type
-		self.width = width
-		self.enabled = True
-		self.locked = True
+class Shape(DipTrace.EnabledMixin, DipTrace.LockedMixin, DipTrace.GroupMixin):
+	tag = 'Shape'
+	defaults = {
+		'shape_type': DipTrace.ShapeType.Line,
+		'width': 0.25,
+		**DipTrace.EnabledMixin.defaults,
+		**DipTrace.LockedMixin.defaults,
+		**DipTrace.GroupMixin.defaults,
+		'points': ()
+	}
 
 	@property
-	def shape_type(self):
-		return self.root.get('Type')
+	def shape_type(self) -> DipTrace.ShapeType:
+		return DipTrace.ShapeType.from_str(self.root.get('Type'))
 
 	@shape_type.setter
-	def shape_type(self, shape_type: ShapeType):
+	def shape_type(self, shape_type: DipTrace.ShapeType):
 		self.root.attrib['Type'] = shape_type.value
 
 	@property
@@ -64,14 +52,12 @@ class Shape(DipTrace.Common):
 	def width(self, width: float):
 		self.root.attrib['LineWidth'] = DipTrace.from_float(width)
 
-	def add_points(self, points):
-		if type(points) is list:
-			for point in points:
-				self.add_points(point)
-		elif type(points) is DipTrace.Point:
-			self._get_first_or_new('Points').append(points.root)
-		return self
+	@property
+	def points(self) -> Tuple[DipTrace.Point]:
+		return tuple(map(lambda x: DipTrace.Point(root=x), self._get_all_sub_tags('Points', DipTrace.Point.tag)))
 
-
-if __name__ == "__main__":
-	pass
+	@points.setter
+	def points(self, points: Tuple[DipTrace.Point]):
+		x = self._get_first_or_new('Points')
+		for point in points:
+			x.append(point.root)

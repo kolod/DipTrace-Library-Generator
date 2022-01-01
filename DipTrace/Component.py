@@ -8,16 +8,15 @@
 import DipTrace
 
 
-class Component(DipTrace.Common):
-	def __init__(self):
-		super().__init__('Component')
+class Component(DipTrace.Base):
+	tag = 'Component'
 
 	def add_parts(self, parts):
 		if type(parts) is list:
 			for part in parts:
 				self.add_parts(part)
 		elif type(parts) is DipTrace.Part:
-			self.root.append(parts.root)
+			self.root.append(parts.normalize().root)
 		return self
 
 

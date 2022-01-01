@@ -8,7 +8,7 @@
 import DipTrace
 
 
-class Pattern(DipTrace.Common):
+class Pattern(DipTrace.Base):
 
 	def __init__(self):
 		super().__init__("Pattern")

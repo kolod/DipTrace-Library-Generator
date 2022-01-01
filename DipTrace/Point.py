@@ -8,11 +8,5 @@
 import DipTrace
 
 
-class Point(DipTrace.CommonCoordinates):
-
-	def __init__(self, x: float = 0.0, y: float = 0.0):
-		super().__init__('Item', x, y)
-
-
-if __name__ == "__main__":
-	pass
+class Point(DipTrace.PointMixin):
+	tag = 'Item'
