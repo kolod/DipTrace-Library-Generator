@@ -6,39 +6,38 @@
 # Glory to Ukraine!
 
 from typing import Optional, Tuple
-from lxml import etree
 import DipTrace
+from DipTrace import VisibleType
 
 
-class Part(DipTrace.Base):
+class Part(
+	DipTrace.WidthHeightMixin,
+	DipTrace.ReferenceMixin,
+	DipTrace.ShapesMixin,
+	DipTrace.TypeLockedMixin,
+	DipTrace.OriginMixin,
+	DipTrace.CategoryMixin
+):
 	tag = 'Part'
 	defaults = {
-		'reference': '',
+		**DipTrace.ReferenceMixin.defaults,
 		'part_type': DipTrace.PartType.Normal,
-		'show_numbers': 1,
+		'show_numbers': DipTrace.VisibleType.Common,
 		'style': DipTrace.Style.Free,
-		'pin_count_1': 0,
-		'pin_count_2': 0,
-		'width': 0.0,
-		'height': 0.0,
-		'locked': False,
+		'pin_count': (0, 0),
+		**DipTrace.WidthHeightMixin.defaults,
+		**DipTrace.TypeLockedMixin.defaults,
 		'index': 1,
 		'name': '',
 		'part_name': 'Part 1',
 		'value': '',
-		'origin': DipTrace.Origin(),
-		'spice_model': DipTrace.SpiceModel(),
-		'categories': (),
+		**DipTrace.OriginMixin.defaults,
+		'spice_model': DipTrace.SpiceModel,
+		**DipTrace.CategoryMixin.defaults,
 		'pins': (),
-		'shapes': (),
+		**DipTrace.ShapesMixin.defaults,
 		'pattern': '',
 	}
-
-	def __init__(self, *args, **kwargs):
-		super().__init__(*args, **kwargs)
-		self._get_first_or_new('Category')
-		self._get_first_or_new('Pins')
-		self._get_first_or_new('Shapes')
 
 	@property
 	def name(self) -> Optional[str]:
@@ -73,32 +72,16 @@ class Part(DipTrace.Base):
 		self._get_first_or_new('Pattern').attrib['PatternType'] = value
 
 	@property
-	def origin(self) -> DipTrace.Origin:
-		return DipTrace.Origin(root=self.root.find('Origin'))
-
-	@origin.setter
-	def origin(self, origin: DipTrace.Origin):
-		self.root.replace(self._get_first_or_new('Origin'), origin.root)
-
-	@property
 	def spice_model(self) -> DipTrace.SpiceModel:
-		return DipTrace.SpiceModel(root=self.root.find('SpiceModel'))
+		return DipTrace.SpiceModel(self.root.find('SpiceModel'))
 
 	@spice_model.setter
 	def spice_model(self, spice_model: DipTrace.SpiceModel):
 		self.root.replace(self._get_first_or_new('SpiceModel'), spice_model.root)
 
 	@property
-	def reference(self) -> Optional[str]:
-		return self.root.get('RefDes')
-
-	@reference.setter
-	def reference(self, value: str):
-		self.root.attrib['RefDes'] = value
-
-	@property
 	def part_type(self) -> Optional[DipTrace.PartType]:
-		return self.root.get('PartType')
+		return DipTrace.PartType.from_str(self.root.get('PartType'))
 
 	@part_type.setter
 	def part_type(self, part_type: DipTrace.PartType):
@@ -113,44 +96,21 @@ class Part(DipTrace.Base):
 		self.root.attrib['Type'] = DipTrace.from_int(value.value)
 
 	@property
-	def pin_count_1(self) -> int:
-		return DipTrace.to_int(self.root.get('Int1'))
+	def pin_count(self) -> Tuple[int, int]:
+		return DipTrace.to_int(self.root.get('Int1')), DipTrace.to_int(self.root.get('Int2'))
 
-	@pin_count_1.setter
-	def pin_count_1(self, count: int):
-		self.root.attrib['Int1'] = DipTrace.from_int(count)
-
-	@property
-	def pin_count_2(self) -> int:
-		return DipTrace.to_int(self.root.get('Int2'))
-
-	@pin_count_2.setter
-	def pin_count_2(self, count: int):
-		self.root.attrib['Int2'] = DipTrace.from_int(count)
+	@pin_count.setter
+	def pin_count(self, count: Tuple[int, int]):
+		self.root.attrib['Int1'] = DipTrace.from_int(count[0])
+		self.root.attrib['Int2'] = DipTrace.from_int(count[1])
 
 	@property
-	def width(self) -> float:
-		return DipTrace.to_float(self.root.get('Width'))
-
-	@width.setter
-	def width(self, width: float):
-		self.root.attrib['Width'] = DipTrace.from_float(width)
-
-	@property
-	def height(self) -> float:
-		return DipTrace.to_float(self.root.get('Height'))
-
-	@height.setter
-	def height(self, height: float):
-		self.root.attrib['Height'] = DipTrace.from_float(height)
-
-	@property
-	def show_numbers(self) -> int:
-		return DipTrace.to_int(self.root.get('ShowNumbers'))
+	def show_numbers(self) -> VisibleType:
+		return VisibleType(DipTrace.to_int(self.root.get('ShowNumbers')))
 
 	@show_numbers.setter
-	def show_numbers(self, state: int):
-		self.root.attrib['ShowNumbers'] = DipTrace.from_int(state)
+	def show_numbers(self, state: VisibleType):
+		self.root.attrib['ShowNumbers'] = DipTrace.from_int(state.value)
 
 	@property
 	def index(self) -> int:
@@ -161,42 +121,14 @@ class Part(DipTrace.Base):
 		self.root.attrib['SubFolderIndex'] = DipTrace.from_int(index)
 
 	@property
-	def locked(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('LockTypeChange'))
-
-	@locked.setter
-	def locked(self, state: bool):
-		self.root.attrib['LockTypeChange'] = DipTrace.from_bool(state)
-
-	@property
 	def pins(self) -> Tuple[DipTrace.Pin]:
-		return tuple(map(lambda x: DipTrace.Pin(root=x), self._get_all_sub_tags('Pins', DipTrace.Pin.tag)))
+		return tuple(map(lambda x: DipTrace.Pin(x), self._get_all_sub_tags('Pins', DipTrace.Pin.tag)))
 
 	@pins.setter
 	def pins(self, pins: Tuple[DipTrace.Pin]):
 		x = self._get_first_or_new('Pins')
 		for pin in pins:
 			x.append(pin.root)
-
-	@property
-	def shapes(self) -> Tuple[DipTrace.Shape]:
-		return tuple(map(lambda x: DipTrace.Shape(root=x), self._get_all_sub_tags('Shapes', DipTrace.Shape.tag)))
-
-	@shapes.setter
-	def shapes(self, shapes: Tuple[DipTrace.Shape]):
-		x = self._get_first_or_new('Shapes')
-		for shape in shapes:
-			x.append(shape.root)
-
-	@property
-	def categories(self) -> Tuple[str]:
-		return tuple(map(lambda x: str(x.text), self._get_all_sub_tags('Category', 'Name')))
-
-	@categories.setter
-	def categories(self, categories: Tuple[str]):
-		x = self._get_first_or_new('Category')
-		for category in categories:
-			etree.SubElement(x, 'Name').text = category
 
 	def normalize(self):
 
@@ -225,12 +157,9 @@ class Part(DipTrace.Base):
 
 		width = max_x - min_x
 		height = max_y - min_y
-		print(f'Normalized size: {width}, {height}')
 
-		self.width = width
-		self.height = height
+		if (width > float('-inf')) and (height > float('-inf')):
+			self.width = width
+			self.height = height
+
 		return self
-
-
-if __name__ == "__main__":
-	pass

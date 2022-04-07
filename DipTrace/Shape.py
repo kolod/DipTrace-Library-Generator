@@ -4,60 +4,76 @@
 # Copyright 2021 Oleksandr Kolodkin <alexandr.kolodkin@gmail.com>.
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
-from typing import Tuple
 
 import DipTrace
+from typing import List, Optional
 
 
-class Shape(DipTrace.EnabledMixin, DipTrace.LockedMixin, DipTrace.GroupMixin):
+class Shape(
+	DipTrace.EnabledMixin,
+	DipTrace.LockedMixin,
+	DipTrace.GroupMixin,
+	DipTrace.PointsMixin,
+	DipTrace.LayerMixin,
+):
 	tag = 'Shape'
 	defaults = {
-		'shape_type': DipTrace.ShapeType.Line,
-		'width': 0.25,
-		**DipTrace.EnabledMixin.defaults,
+		'type': DipTrace.ShapeType.Line,
+		'width': None,
+		'enabled': None,
 		**DipTrace.LockedMixin.defaults,
 		**DipTrace.GroupMixin.defaults,
-		'points': ()
+		**DipTrace.PointsMixin.defaults,
+		'layer': None,
+		'all_layers': None,
 	}
 
 	@property
-	def shape_type(self) -> DipTrace.ShapeType:
+	def type(self) -> DipTrace.ShapeType:
 		return DipTrace.ShapeType.from_str(self.root.get('Type'))
 
-	@shape_type.setter
-	def shape_type(self, shape_type: DipTrace.ShapeType):
+	@type.setter
+	def type(self, shape_type: DipTrace.ShapeType):
 		self.root.attrib['Type'] = shape_type.value
 
 	@property
-	def enabled(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('Enabled'))
-
-	@enabled.setter
-	def enabled(self, state: bool):
-		self.root.attrib['Enabled'] = DipTrace.from_bool(state)
-
-	@property
-	def locked(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('Locked'))
-
-	@locked.setter
-	def locked(self, state: bool):
-		self.root.attrib['Locked'] = DipTrace.from_bool(state)
-
-	@property
-	def width(self) -> float:
-		return DipTrace.to_float(self.root.get('LineWidth'))
+	def width(self) -> Optional[float]:
+		if 'LineWidth' in self.root.attrib:
+			return DipTrace.to_float(self.root.get('LineWidth'))
+		else:
+			return None
 
 	@width.setter
 	def width(self, width: float):
-		self.root.attrib['LineWidth'] = DipTrace.from_float(width)
+		if width is not None:
+			self.root.attrib['LineWidth'] = DipTrace.from_float(width)
+		elif 'LineWidth' in self.root.attrib:
+			self.root.attrib.pop('LineWidth')
 
 	@property
-	def points(self) -> Tuple[DipTrace.Point]:
-		return tuple(map(lambda x: DipTrace.Point(root=x), self._get_all_sub_tags('Points', DipTrace.Point.tag)))
+	def all_layers(self) -> Optional[bool]:
+		if 'AllLayers' in self.root.attrib:
+			return DipTrace.to_bool(self.root.get('AllLayers'))
+		else:
+			return None
 
-	@points.setter
-	def points(self, points: Tuple[DipTrace.Point]):
-		x = self._get_first_or_new('Points')
-		for point in points:
-			x.append(point.root)
+	@all_layers.setter
+	def all_layers(self, state: Optional[bool]):
+		if state is not None:
+			self.root.attrib['AllLayers'] = DipTrace.from_bool(state)
+		elif 'AllLayers' in self.root.attrib:
+			self.root.attrib.pop('AllLayers')
+
+
+class ShapesMixin(DipTrace.Base):
+	defaults = {'shapes': ()}
+
+	@property
+	def shapes(self) -> List[Shape]:
+		return list(map(lambda x: Shape(x), self._get_all_sub_tags('Shapes', 'Shape')))
+
+	@shapes.setter
+	def shapes(self, shapes: List[Shape]):
+		x = self._get_first_or_new('Shapes')
+		for shape in shapes:
+			x.append(shape.root)

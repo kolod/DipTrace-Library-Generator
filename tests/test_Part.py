@@ -44,26 +44,38 @@ class TestPart(unittest.TestCase):
 			'  <Pins>\n' \
 			'    <Pin X="0" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" ' \
 			'Orientation="0" PadIndex="1" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" ' \
-			'NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0" Group="0">\n' \
+			'NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">\n' \
 			'      <Name></Name>\n' \
 			'      <PadNumber></PadNumber>\n' \
 			'      <NameFont Size="5" Width="-2" Scale="1"/>\n' \
 			'    </Pin>\n' \
 			'  </Pins>\n' \
 			'  <Shapes/>\n' \
-			'  <Pattern PatternType=""/>\n' \
+			'  <Pattern PatternType="PatType0"/>\n' \
 			'</Part>\n'
 
 		actual = DipTrace.Part(
 			name='SMAJ5.0A',
 			reference='D',
 			value='5 V',
+			pattern='PatType0',
 			width=5.08,
 			height=2.54,
 			pins=[DipTrace.Pin()]
 		)
 
 		self.assertEqual(expected, str(actual))
+		self.assertEqual('SMAJ5.0A', actual.name)
+		self.assertEqual('D', actual.reference)
+		self.assertEqual('5 V', actual.value)
+		self.assertEqual(5.08, actual.width)
+		self.assertEqual(2.54, actual.height)
+		self.assertEqual(0.0, actual.origin.x)
+		self.assertEqual('Part 1', actual.part_name)
+		self.assertEqual('PatType0', actual.pattern)
+		self.assertEqual(DipTrace.SpiceModelType.SubCkt, actual.spice_model.model_type)
+		self.assertEqual(DipTrace.PartType.Normal, actual.part_type)
+		self.assertEqual(0, actual.pin_count[1])
 
 	def test_normalize(self):
 		part = DipTrace.Part(

@@ -1,0 +1,5 @@
+py7zr
+requests~=2.26.0
+lxml~=4.7.1
+setuptools~=60.1.0
+termcolor~=1.1.0

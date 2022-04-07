@@ -2,6 +2,9 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
+.tox
 .idea
 venv
 *.coverage
+/examples/actual
+__pycache__

@@ -14,7 +14,7 @@ class TestPin(unittest.TestCase):
 		expected = \
 			'<Pin X="0" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="0" PadIndex="1" '\
 			'Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" '\
-			'NumOrientation="0" NameOrientation="0" Group="0">\n'\
+			'NumOrientation="0" NameOrientation="0">\n'\
 			'  <Name></Name>\n'\
 			'  <PadNumber></PadNumber>\n'\
 			'  <NameFont Size="5" Width="-2" Scale="1"/>\n'\
@@ -28,7 +28,7 @@ class TestPin(unittest.TestCase):
 		expected = \
 			'<Pin X="-6.35" Y="-8.89" Enabled="Y" Locked="N" Type="Shift" ElectricType="Undefined" Orientation="0" ' \
 			'PadIndex="12" Length="3.81" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0.6065" NameYShift="-1.2851" ' \
-			'SignalDelay="3" NumOrientation="0" NameOrientation="0" Group="0">\n' \
+			'SignalDelay="3" NumOrientation="0" NameOrientation="0">\n' \
 			'  <Name>12</Name>\n' \
 			'  <PadNumber>12</PadNumber>\n' \
 			'  <NameFont Size="5" Width="-2" Scale="1"/>\n' \

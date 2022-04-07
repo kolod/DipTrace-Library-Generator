@@ -1,0 +1,64 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="5.397" LockTypeChange="N" SubFolderIndex="1">
+  <Name>LED-3mm-green</Name>
+  <PartName>Part 1</PartName>
+  <Value>LED-3mm-green</Value>
+  <Origin X="0" Y="-1.4285"/>
+  <SpiceModel Type="SubCkt"/>
+  <Category>
+    <Name>Connectors</Name>
+  </Category>
+  <Pins>
+    <Pin X="2.54" Y="-1.4285" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="180" PadIndex="1" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">
+      <Name>P1</Name>
+      <PadNumber>1</PadNumber>
+      <NameFont Size="5" Width="-2" Scale="1"/>
+    </Pin>
+    <Pin X="-2.54" Y="-1.4285" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="0" PadIndex="2" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">
+      <Name>P2</Name>
+      <PadNumber>2</PadNumber>
+      <NameFont Size="5" Width="-2" Scale="1"/>
+    </Pin>
+  </Pins>
+  <Shapes>
+    <Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="-2.54" Y="-1.4285"/>
+        <Item X="1.0999" Y="-1.4285"/>
+      </Points>
+    </Shape>
+    <Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="2.54" Y="-1.4285"/>
+        <Item X="1.0999" Y="-1.4285"/>
+      </Points>
+    </Shape>
+    <Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="-1.0999" Y="-2.6985"/>
+        <Item X="1.0999" Y="-1.4285"/>
+        <Item X="-1.0999" Y="-0.1585"/>
+        <Item X="-1.0999" Y="-2.6985"/>
+      </Points>
+    </Shape>
+    <Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="1.0999" Y="-2.6985"/>
+        <Item X="1.0999" Y="-0.1585"/>
+      </Points>
+    </Shape>
+    <Shape Type="Arrow" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="0.343" Y="0.1845"/>
+        <Item X="1.587" Y="2.0635"/>
+      </Points>
+    </Shape>
+    <Shape Type="Arrow" LineWidth="0.25" Enabled="Y" Locked="Y">
+      <Points>
+        <Item X="-0.61" Y="0.8195"/>
+        <Item X="0.635" Y="2.6985"/>
+      </Points>
+    </Shape>
+  </Shapes>
+  <Pattern PatternType="PatType0"/>
+</Part>

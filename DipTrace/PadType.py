@@ -5,30 +5,24 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-from lxml import etree
-from typing import Optional
-from enum import Enum
+from typing import List
 import DipTrace
 
 
 class PadType(DipTrace.Base):
-	class HoleType(Enum):
-		Round = 'Round'
-		Obround = 'Obround'
-
-	class Shape(Enum):
-		Ellipse = 'Ellipse'
-		Obround = 'Obround'
-		Rectangle = 'Rectangle'
-		Polygon = 'Polygon'
-		DShape = 'D-shape'
-
-	def __init__(self, name: str = ''):
-		super().__init__('PadType')
-		self.root.attrib['Name'] = name
+	tag = 'PadType'
+	defaults = {
+		'name': '',
+		'type': DipTrace.MountType.SurfaceMount,
+		'hole_type': DipTrace.HoleType.Obround,
+		'hole': 0.0,
+		'side': DipTrace.Side.Top,
+		'main_stack': DipTrace.MainStack(),
+		'terminals': ()
+	}
 
 	@property
-	def name(self) -> Optional[str]:
+	def name(self) -> str:
 		return self.root.get("Name")
 
 	@name.setter
@@ -36,50 +30,57 @@ class PadType(DipTrace.Base):
 		self.root.attrib['Name'] = name
 
 	@property
-	def hole_type(self) -> Optional[HoleType]:
-		value = self.root.get("HoleType")
-		return self.HoleType[value]
+	def type(self) -> DipTrace.MountType:
+		return DipTrace.MountType.from_str(self.root.get('Type'))
 
-	@hole_type.setter
-	def hole_type(self, hole_type: HoleType):
-		self.root.attrib['HoleType'] = hole_type.name
+	@type.setter
+	def type(self, t: DipTrace.MountType):
+		self.root.attrib['Type'] = t.value
 
 	@property
-	def side(self) -> Optional[DipTrace.Side]:
-		return self.root.get("Side")
+	def hole_type(self) -> DipTrace.HoleType:
+		return DipTrace.HoleType.from_str(self.root.get("HoleType"))
+
+	@hole_type.setter
+	def hole_type(self, hole_type: DipTrace.HoleType):
+		self.root.attrib['HoleType'] = hole_type.value
+
+	@property
+	def side(self) -> DipTrace.Side:
+		return DipTrace.Side.from_str(self.root.get("Side"))
 
 	@side.setter
 	def side(self, side: DipTrace.Side):
-		self.root.attrib['Side'] = side.name
+		self.root.attrib['Side'] = side.value
 
 	@property
-	def hole(self) -> Optional[float]:
-		try:
-			return float(self.root.get("Hole"))
-		except ValueError:
-			return None
-
-	def add_main_stack(self, shape: Shape, width: float, height: float, x_offset: float, y_offset: float, points):
-		main_stack = etree.Element('MainStack')
-		main_stack.attrib['Shape'] = shape
-		main_stack.attrib['Width'] = width
-		main_stack.attrib['Height'] = height
-		main_stack.attrib['XOff'] = x_offset
-		main_stack.attrib['YOff'] = y_offset
-		if shape == self.Shape.Polygon:
-			points_element = etree.SubElement(self.root, 'Points')
-			for point in points:
-				points_element.insert(point.root)
-
-		self.__root.insert(main_stack)
+	def hole(self) -> float:
+		return DipTrace.to_float(self.root.get("Hole"))
 
 	@hole.setter
 	def hole(self, hole: float):
-		self.__root.attrib['Hole'] = str(hole)
+		self.root.attrib['Hole'] = DipTrace.from_float(hole)
 
-	def __str__(self) -> str:
-		return etree.tostring(self.__root, encoding='utf-8', pretty_print=True).decode('utf-8')
+	@hole.setter
+	def hole(self, hole: float):
+		self.root.attrib['Hole'] = str(hole)
 
+	@property
+	def main_stack(self) -> DipTrace.MainStack:
+		return DipTrace.MainStack(self.root.find('MainStack'))
 
-if __name__ == "__main__":
-	pass
+	@main_stack.setter
+	def main_stack(self, stack: DipTrace.MainStack):
+		self.root.replace(self._get_first_or_new('MainStack'), stack.root)
+
+	@property
+	def terminals(self) -> List[DipTrace.Terminal]:
+		def apply(terminal: lxml.etree._Element): # noqa:
+			return DipTrace.Terminal(terminal)
+		return list(map(apply, self._get_all_sub_tags('Terminals', DipTrace.Terminal.tag)))
+
+	@terminals.setter
+	def terminals(self, terminals: List[DipTrace.Terminal]):
+		x = self._get_first_or_new('Terminals')
+		for terminal in terminals:
+			x.append(terminal.root)

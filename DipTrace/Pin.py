@@ -14,6 +14,7 @@ class Pin(
 	DipTrace.EnabledMixin,
 	DipTrace.PointMixin,
 	DipTrace.GroupMixin,
+	DipTrace.OrientationMixin,
 ):
 	tag = 'Pin'
 	defaults = {
@@ -24,7 +25,7 @@ class Pin(
 		'number': '',
 		'pin_type': DipTrace.PinType.Default,
 		'electric_type': DipTrace.ElectricType.Undefined,
-		'orientation': 0,
+		**DipTrace.OrientationMixin.defaults,
 		'pad_index': 1,
 		'length': 2.54,
 		'show_name': False,
@@ -81,19 +82,11 @@ class Pin(
 
 	@property
 	def font(self) -> DipTrace.NameFont:
-		return DipTrace.NameFont(root=self.root.find('NameFont'))
+		return DipTrace.NameFont(self.root.find('NameFont'))
 
 	@font.setter
 	def font(self, font: DipTrace.NameFont):
 		self.root.replace(self._get_first_or_new('NameFont'), font.root)
-
-	@property
-	def orientation(self) -> float:
-		return DipTrace.to_float(self.root.get('Orientation'))
-
-	@orientation.setter
-	def orientation(self, value: float):
-		self.root.attrib['Orientation'] = DipTrace.from_float(value)
 
 	@property
 	def length(self) -> float:

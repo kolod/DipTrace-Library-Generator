@@ -5,82 +5,41 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-import lxml.etree
 from typing import Optional
-
 import DipTrace
 
 
-class Base(object):
-	defaults = {}
-	tag: str
-
-	def __init__(self, *args, **kwargs):
-		kwargs = {**self.defaults, **kwargs}
-		if ('root' in kwargs.keys()) and (kwargs['root'] is not None):
-			self.root = kwargs['root']
-		else:
-			self.root = lxml.etree.Element(self.tag)
-		for key, value in kwargs.items():
-			if key in (self.defaults.keys()):
-				setattr(self, key, value)
-
-	def __str__(self) -> str:
-		return lxml.etree.tostring(self.root, encoding='utf-8', pretty_print=True).decode('utf-8')
-
-	def save(self, filename: str):
-		self.root.write(filename, method='xml', xml_declaration=True, encoding='utf-8', pretty_print=True)
-
-	def load(self, filename: str):
-		self.root = lxml.etree.parse(filename).getroot()
-		return self
-
-	def _get_first_text_or_default(self, tag: str, default: str = '') -> str:
-		x = self.root.find(tag)
-		if x is not None:
-			return x.text
-		else:
-			return default
-
-	def _get_first_attribute_or_default(self, tag: str, attribute: str, default: str = '') -> str:
-		x = self.root.find(tag)
-		if x is not None:
-			return x.get(attribute)
-		else:
-			return default
-
-	def _get_first_or_new(self, tag: str) -> lxml.etree:
-		x = self.root.find(tag)
-		if x is None:
-			return lxml.etree.SubElement(self.root, tag)
-		else:
-			return x
-
-	def _set_first_text(self, tag: str, value: str):
-		self._get_first_or_new(tag).text = value
-
-	def _get_all_sub_tags(self, tag: str, sub: str):
-		x = self.root.find(tag)
-		if x is None:
-			lxml.etree.SubElement(self.root, tag)
-			return ()
-		else:
-			return x.findall(sub)
-
-
-class GroupMixin(Base):
-	defaults = {'group': 0}
+class GroupMixin(DipTrace.Base):
+	defaults = {'group': None}
 
 	@property
-	def group(self) -> int:
-		return DipTrace.to_int(self.root.get('Group'))
+	def group(self) -> Optional[int]:
+		if 'Group' in self.root.attrib:
+			return DipTrace.to_int(self.root.get('Group'))
+		else:
+			return None
 
 	@group.setter
-	def group(self, group):
-		self.root.attrib['Group'] = DipTrace.from_int(group)
+	def group(self, group: Optional[int]):
+		if group is not None:
+			self.root.attrib['Group'] = DipTrace.from_int(group)
+		elif 'Group' in self.root.attrib:
+			self.root.attrib.pop('Group')
 
 
-class PointMixin(Base):
+class OrientationMixin(DipTrace.Base):
+	defaults = {'orientation': 0.0}
+
+	@property
+	def orientation(self) -> float:
+		return DipTrace.to_float(self.root.get('Orientation'))
+
+	@orientation.setter
+	def orientation(self, value: float):
+		self.root.attrib['Orientation'] = DipTrace.from_float(value)
+
+
+class PointMixin(DipTrace.Base):
 	defaults = {'x': 0.0, 'y': 0.0}
 
 	@property
@@ -100,19 +59,25 @@ class PointMixin(Base):
 		self.root.attrib['Y'] = DipTrace.from_float(y)
 
 
-class EnabledMixin(Base):
+class EnabledMixin(DipTrace.Base):
 	defaults = {'enabled': True}
 
 	@property
-	def enabled(self) -> bool:
-		return DipTrace.to_bool(self.root.attrib.get('Enabled'))
+	def enabled(self) -> Optional[bool]:
+		if 'Enabled' in self.root.attrib:
+			return DipTrace.to_bool(self.root.attrib.get('Enabled'))
+		else:
+			return None
 
 	@enabled.setter
-	def enabled(self, state: bool):
-		self.root.attrib['Enabled'] = DipTrace.from_bool(state)
+	def enabled(self, state: Optional[bool]):
+		if state is not None:
+			self.root.attrib['Enabled'] = DipTrace.from_bool(state)
+		elif 'Enabled' in self.root.attrib:
+			self.root.attrib.pop('Enabled')
 
 
-class LockedMixin(Base):
+class LockedMixin(DipTrace.Base):
 	defaults = {'locked': True}
 
 	@property
@@ -124,11 +89,41 @@ class LockedMixin(Base):
 		self.root.attrib['Locked'] = DipTrace.from_bool(state)
 
 
-class LibraryMixin(Base):
+class LayerMixin(DipTrace.Base):
+	defaults = {'layer': DipTrace.LayerType.TopSilk}
+
+	@property
+	def layer(self) -> Optional[DipTrace.LayerType]:
+		if 'Layer' in self.root.attrib:
+			return DipTrace.LayerType.from_str(self.root.attrib.get('Layer'))
+		else:
+			return None
+
+	@layer.setter
+	def layer(self, layer: Optional[DipTrace.LayerType]):
+		if layer is not None:
+			self.root.attrib['Layer'] = layer.value
+		elif 'Layer' in self.root.attrib:
+			self.root.attrib.pop('Layer')
+
+
+class TypeLockedMixin(DipTrace.Base):
+	defaults = {'type_locked': False}
+
+	@property
+	def type_locked(self) -> bool:
+		return DipTrace.to_bool(self.root.attrib.get('LockTypeChange'))
+
+	@type_locked.setter
+	def type_locked(self, state: bool):
+		self.root.attrib['LockTypeChange'] = DipTrace.from_bool(state)
+
+
+class LibraryMixin(DipTrace.Base):
 	tag = 'Library'
 	defaults = {
 		'version': '4.2.0.1',
-		'units': 'mm',
+		'units': DipTrace.Units.mm,
 		'name': '',
 		'hint': '',
 	}
@@ -166,13 +161,83 @@ class LibraryMixin(Base):
 		self.root.attrib['Version'] = version
 
 	@property
-	def units(self) -> Optional[str]:
-		return self.root.get("Units")
+	def units(self) -> DipTrace.Units:
+		return DipTrace.Units.from_str(self.root.get("Units"))
 
 	@units.setter
-	def units(self, units: str):
-		self.root.attrib['Units'] = units
+	def units(self, units: DipTrace.Units):
+		self.root.attrib['Units'] = units.value
 
 
-if __name__ == "__main__":
-	pass
+class WidthHeightMixin(DipTrace.Base):
+	defaults = {'width': 0.0, 'height': 0.0}
+
+	@property
+	def width(self) -> float:
+		return DipTrace.to_float(self.root.get('Width'))
+
+	@width.setter
+	def width(self, width: float):
+		self.root.attrib['Width'] = DipTrace.from_float(width)
+
+	@property
+	def height(self) -> float:
+		return DipTrace.to_float(self.root.get('Height'))
+
+	@height.setter
+	def height(self, height: float):
+		self.root.attrib['Height'] = DipTrace.from_float(height)
+
+
+class ReferenceMixin(DipTrace.Base):
+	defaults = {'reference': ''}
+
+	@property
+	def reference(self) -> str:
+		return self.root.get('RefDes')
+
+	@reference.setter
+	def reference(self, value: str):
+		self.root.attrib['RefDes'] = value
+
+
+class AngleMixin(DipTrace.Base):
+	defaults = {'angle': 0.0}
+
+	@property
+	def angle(self) -> float:
+		return DipTrace.to_float(self.root.get('Angle'))
+
+	@angle.setter
+	def angle(self, angle: float):
+		self.root.attrib['Angle'] = DipTrace.from_float(angle)
+
+
+class CornerMixin(DipTrace.Base):
+	defaults = {'corner': None}
+
+	@property
+	def corner(self) -> Optional[int]:
+		if 'Corner' in self.root.attrib:
+			return DipTrace.to_int(self.root.get('Corner'))
+		else:
+			return None
+
+	@corner.setter
+	def corner(self, corner: Optional[int]):
+		if corner is not None:
+			self.root.attrib['Corner'] = DipTrace.from_int(corner)
+		elif 'Corner' in self.root.attrib:
+			self.root.attrib.pop('Corner')
+
+
+class CategoryMixin(DipTrace.Base):
+	defaults = {'category': DipTrace.Category}
+
+	@property
+	def category(self) -> DipTrace.Category:
+		return DipTrace.Category(self.root.find('Category'))
+
+	@category.setter
+	def category(self, category: DipTrace.Category):
+		self.root.replace(self._get_first_or_new('Category'), category.root)

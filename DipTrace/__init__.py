@@ -7,15 +7,23 @@
 
 
 from .Utils import *
-from .Mixins import *
 from .Enums import *
-
-from .Point import Point
-from .Origin import Origin
+from .Base import Base
+from .Category import Category
+from .Mixins import *
+from .Segments import Segment, TopSegmentsMixin, BottomSegmentsMixin
+from .Origin import Origin, OriginMixin
+from .Point import Point, Rotate, Offset, Zoom, PointsMixin, get_arc_from_points, is_angle_cross_arc
+from .Shape import Shape, ShapesMixin
+from .Pad import Pad, PadsMixin
+from .Dimension import Connection, Dimension, DimensionsMixin
+from .MaskPaste import MaskPaste
+from .Filename import Filename
+from .Model3D import Model3D, Color
+from .Terminal import Terminal
+from .MainStack import MainStack
 from .NameFont import NameFont
 from .SpiceModel import SpiceModel
-from .Shape import Shape
-from .Pad import Pad
 from .PadType import PadType
 from .Pattern import Pattern
 from .Pin import Pin

@@ -6,19 +6,27 @@
 # Glory to Ukraine!
 
 import DipTrace
+from typing import Optional, List
 
 
 class Component(DipTrace.Base):
 	tag = 'Component'
+	defaults = {
+		'parts': []
+	}
 
-	def add_parts(self, parts):
-		if type(parts) is list:
+	@property
+	def parts(self) -> Optional[List[DipTrace.Part]]:
+		if len(x := self.root.findall('Part')) > 0:
+			return list(map(lambda v: DipTrace.Part(v), x))
+		else:
+			return None
+
+	@parts.setter
+	def parts(self, parts: Optional[List[DipTrace.Part]]):
+		if parts is not None:
 			for part in parts:
-				self.add_parts(part)
-		elif type(parts) is DipTrace.Part:
-			self.root.append(parts.normalize().root)
-		return self
-
-
-if __name__ == "__main__":
-	pass
+				self.root.append(part.normalize().root)
+		else:
+			for x in self.root.findall('Part'):
+				self.root.remove(x)

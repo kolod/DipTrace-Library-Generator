@@ -72,6 +72,7 @@ def pins() -> List[DipTrace.Pin]:
 		DipTrace.Pin(
 			name='1',
 			number='1',
+			group=0,
 			x=2.54,
 			y=0,
 			orientation=180.0,
@@ -81,6 +82,7 @@ def pins() -> List[DipTrace.Pin]:
 		DipTrace.Pin(
 			name='2',
 			number='2',
+			group=0,
 			x=-2.54,
 			y=0,
 			orientation=0.0,
@@ -96,13 +98,19 @@ def pin_shape_uni() -> List[DipTrace.Shape]:
 
 	return [
 		DipTrace.Shape(
+			width=0.25,
+			enabled=True,
+			group=0,
 			points=[
 				DipTrace.Point(x=-2.54, y=0.0),
 				DipTrace.Point(x=2.54, y=0.0),
 			]
 		),
 		DipTrace.Shape(
-			shape_type=DipTrace.ShapeType.Polyline,
+			type=DipTrace.ShapeType.Polyline,
+			width=0.25,
+			enabled=True,
+			group=0,
 			points=[
 				DipTrace.Point(x=-x, y=1.27),
 				DipTrace.Point(x=x, y=0.00),
@@ -111,7 +119,10 @@ def pin_shape_uni() -> List[DipTrace.Shape]:
 			]
 		),
 		DipTrace.Shape(
-			shape_type=DipTrace.ShapeType.Polyline,
+			type=DipTrace.ShapeType.Polyline,
+			width=0.25,
+			enabled=True,
+			group=0,
 			points=[
 				DipTrace.Point(x=x + 1.27 / 2, y=1.27),
 				DipTrace.Point(x=x, y=1.27),
@@ -127,13 +138,19 @@ def pin_shape_bi() -> List[DipTrace.Shape]:
 
 	return [
 		DipTrace.Shape(
+			width=0.25,
+			enabled=True,
+			group=0,
 			points=[
 				DipTrace.Point(x=-2.54, y=0.0),
 				DipTrace.Point(x=2.54, y=0.0),
 			]
 		),
 		DipTrace.Shape(
-			shape_type=DipTrace.ShapeType.Polyline,
+			width=0.25,
+			enabled=True,
+			group=0,
+			type=DipTrace.ShapeType.Polyline,
 			points=[
 				DipTrace.Point(x=0.0, y=0.0),
 				DipTrace.Point(x=-x, y=1.27),
@@ -145,7 +162,10 @@ def pin_shape_bi() -> List[DipTrace.Shape]:
 			]
 		),
 		DipTrace.Shape(
-			shape_type=DipTrace.ShapeType.Polyline,
+			width=0.25,
+			enabled=True,
+			group=0,
+			type=DipTrace.ShapeType.Polyline,
 			points=[
 				DipTrace.Point(x=1.27 / 2, y=1.27),
 				DipTrace.Point(x=0, y=1.27),
@@ -157,68 +177,67 @@ def pin_shape_bi() -> List[DipTrace.Shape]:
 
 
 def component_tvs_uni() -> List[DipTrace.Component]:
-	result = []
-
-	for d in data:
-		part = DipTrace.Part(
-			name=d['uni'],
-			reference='D',
-			value=f'{d["voltage"]:.5g} V',
-			categories=('Diodes',),
-			shapes=pin_shape_uni(),
-			pins=pins(),
-			pattern='PatType0',
-			origin=DipTrace.Origin(),
-			spice_model=DipTrace.SpiceModel()
-		)
-
-		component = DipTrace.Component()
-		component.add_parts(part)
-		result.append(component)
-
-	return result
+	return [
+		DipTrace.Component(
+			parts=[DipTrace.Part(
+				name=d['uni'],
+				reference='D',
+				value=f'{d["voltage"]:.5g} V',
+				category=DipTrace.Category(
+					index=None,
+					name='Diodes'
+				),
+				shapes=pin_shape_uni(),
+				pins=pins(),
+				pattern='PatType0',
+				origin=DipTrace.Origin(),
+				spice_model=DipTrace.SpiceModel(),
+				show_numbers=DipTrace.VisibleType.Hide
+			)]
+		) for d in data]
 
 
 def component_tvs_bi() -> List[DipTrace.Component]:
-	result = []
-
-	for d in data:
-		part = DipTrace.Part(
-			name=d['bi'],
-			reference='D',
-			value=f'{d["voltage"]:.5g} V',
-			categories=('Diodes',),
-			shapes=pin_shape_bi(),
-			pins=pins(),
-			pattern='PatType0',
-			origin=DipTrace.Origin(),
-			spice_model=DipTrace.SpiceModel()
-		)
-
-		part.pattern = 'PatType1'
-		component = DipTrace.Component().add_parts(part)
-		result.append(component)
-
-	return result
-
-
-def run(filename: str, patterns_library: str) -> None:
-	DipTrace.ComponentLibrary(
-		name='Diodes TVS',
-		pattern_library=DipTrace.PatternLibrary().load(patterns_library)
-	).add_components([
-		component_tvs_uni(),
-		component_tvs_bi()
-	]).save(filename)
+	return [
+		DipTrace.Component(
+			parts=[DipTrace.Part(
+				name=d['bi'],
+				reference='D',
+				value=f'{d["voltage"]:.5g} V',
+				category=DipTrace.Category(
+					index=None,
+					name='Diodes'
+				),
+				shapes=pin_shape_bi(),
+				pins=pins(),
+				pattern='PatType1',
+				origin=DipTrace.Origin(),
+				spice_model=DipTrace.SpiceModel(),
+				show_numbers=DipTrace.VisibleType.Hide
+			)]
+		) for d in data]
 
 
 if __name__ == "__main__":
-	patterns = '../samples/Diodes TVS.patterns.xml'
-	actual = '../samples/Diodes TVS.component.xml'
-	expected = '../tvs.xml'
+	name = 'Diodes TVS'
+	source_patterns_path = f'source/{name}.{DipTrace.PatternLibrary.extensions[0]}'
+	expected_patterns_path = f'expected/{name}.{DipTrace.PatternLibrary.extensions[0]}'
+	actual_patterns_path = f'actual/{name}.{DipTrace.PatternLibrary.extensions[0]}'
+	expected_components_path = f'expected/{name}.{DipTrace.ComponentLibrary.extensions[0]}'
+	actual_components_path = f'actual/{name}.{DipTrace.ComponentLibrary.extensions[0]}'
 
-	DipTrace.format_xml(patterns)
-	run(actual, patterns)
-	DipTrace.format_xml(actual)
-	DipTrace.format_xml(expected)
-	DipTrace.compare(expected, actual)
+	DipTrace.ComponentLibrary(
+		name='Diodes TVS',
+		pattern_library=DipTrace.PatternLibrary().load(source_patterns_path),
+		components=[
+			*component_tvs_uni(),
+			*component_tvs_bi()
+		]
+	).save(actual_components_path).pattern_library.save(actual_patterns_path)
+
+	DipTrace.format_xml(actual_patterns_path)
+	DipTrace.format_xml(actual_components_path)
+	DipTrace.format_xml(expected_patterns_path)
+	DipTrace.format_xml(expected_components_path)
+	DipTrace.compare(expected_patterns_path, actual_patterns_path)
+	DipTrace.compare(expected_components_path, actual_components_path)

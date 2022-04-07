@@ -1,0 +1,543 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<Library Type="DipTrace-PatternLibrary" Name="LEDs" Hint="LEDs" Version="4.2.0.1" Units="mm">
+  <PadTypes>
+    <PadType Name="PadT0" Type="Through" HoleType="Round" Hole="0.9" Side="Top">
+      <MainStack Shape="Obround" Width="1.5" Height="1.5" XOff="0" YOff="0"/>
+      <Terminals>
+        <Terminal Shape="Rectangle" X="0" Y="0" Angle="0" Width="0.45" Height="0.45" Corner="10"/>
+      </Terminals>
+    </PadType>
+    <PadType Name="PadT1" Type="Through" HoleType="Round" Hole="0.9" Side="Top">
+      <MainStack Shape="Rectangle" Width="1.5" Height="1.5" XOff="0" YOff="0" Corner="10"/>
+      <Terminals>
+        <Terminal Shape="Rectangle" X="0" Y="0" Angle="0" Width="0.45" Height="0.45" Corner="10"/>
+      </Terminals>
+    </PadType>
+  </PadTypes>
+  <Patterns>
+    <Pattern RefDes="D" Mounting="None" Width="4.04" Height="3.85" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-3mm-green</Name>
+      <Value>LED-3mm-green</Value>
+      <Category Index="0"/>
+      <Origin X="0" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="-1.0607"/>
+            <Item X="0" Y="-1.5"/>
+            <Item X="1.0607" Y="-1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="1.0607"/>
+            <Item X="0" Y="1.5"/>
+            <Item X="1.0607" Y="1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-3mm-green.step</Path>
+          <Var>LED-3mm-green.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="4.04" Height="3.85" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-3mm-red</Name>
+      <Value>LED-3mm-red</Value>
+      <Category Index="0"/>
+      <Origin X="0" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="-1.0607"/>
+            <Item X="0" Y="-1.5"/>
+            <Item X="1.0607" Y="-1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="1.0607"/>
+            <Item X="0" Y="1.5"/>
+            <Item X="1.0607" Y="1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-3mm-red.step</Path>
+          <Var>LED-3mm-red.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="4.04" Height="3.85" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-3mm-orange</Name>
+      <Value>LED-3mm-orange</Value>
+      <Category Index="0"/>
+      <Origin X="0" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="-1.0607"/>
+            <Item X="0" Y="-1.5"/>
+            <Item X="1.0607" Y="-1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="1.0607"/>
+            <Item X="0" Y="1.5"/>
+            <Item X="1.0607" Y="1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-3mm-orange.step</Path>
+          <Var>LED-3mm-orange.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="4.04" Height="3.85" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-3mm-clear</Name>
+      <Value>LED-3mm-clear</Value>
+      <Category Index="0"/>
+      <Origin X="0" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.27" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="-1.0607"/>
+            <Item X="0" Y="-1.5"/>
+            <Item X="1.0607" Y="-1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-1.0607" Y="1.0607"/>
+            <Item X="0" Y="1.5"/>
+            <Item X="1.0607" Y="1.0607"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="0" Y="-1.925"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-1.6" Y="-1.0703"/>
+            <Item X="-1.6" Y="1.0703"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="0" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-3mm-clear.step</Path>
+          <Var>LED-3mm-clear.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="5.55" Height="5.9" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-5mm-green</Name>
+      <Value>LED-5mm-green</Value>
+      <Category Index="0"/>
+      <Origin X="-0.175" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.445" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.095" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="-0.175" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-5mm-green.step</Path>
+          <Var>LED-5mm-green.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="5.55" Height="5.9" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-5mm-red</Name>
+      <Value>LED-5mm-red</Value>
+      <Category Index="0"/>
+      <Origin X="-0.175" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.445" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.095" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="-0.175" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-5mm-red.step</Path>
+          <Var>LED-5mm-red.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="5.55" Height="5.9" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-5mm-orange</Name>
+      <Value>LED-5mm-orange</Value>
+      <Category Index="0"/>
+      <Origin X="-0.175" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.445" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.095" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="-0.175" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-5mm-orange.step</Path>
+          <Var>LED-5mm-orange.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+    <Pattern RefDes="D" Mounting="None" Width="5.55" Height="5.9" Orientation="0" LockTypeChange="N" Type="Free" Float1="0" Float2="0" Float3="0" Int1="0" Int2="0">
+      <Name>LED-5mm-clear</Name>
+      <Value>LED-5mm-clear</Value>
+      <Category Index="0"/>
+      <Origin X="-0.175" Y="0" Cross="Y" Circle="Y" Common="Hide" Courtyard="Show"/>
+      <DefPad PadType="PadT0"/>
+      <Pads>
+        <Pad PadType="PadT1" Enabled="Y" X="-1.445" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>1</Number>
+        </Pad>
+        <Pad PadType="PadT0" Enabled="Y" X="1.095" Y="0" Angle="0" Locked="Y" Side="Top">
+          <Number>2</Number>
+        </Pad>
+      </Pads>
+      <Shapes>
+        <Shape Type="Arc" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Silk" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Courtyard" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Arc" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-0.175" Y="-2.95"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+        <Shape Type="Line" Locked="Y" Layer="Top Assy" AllLayers="N">
+          <Points>
+            <Item X="-2.775" Y="-1.3937"/>
+            <Item X="-2.775" Y="1.3937"/>
+          </Points>
+        </Shape>
+      </Shapes>
+      <Model3D Mirror="N" NoSearch="N" Units="mm" IPC_XOff="-0.175" IPC_YOff="0" AutoHeight="0" AutoColor="4934475" Type="File" KeepPins="N">
+        <Filename>
+          <Path>LED-5mm-clear.step</Path>
+          <Var>LED-5mm-clear.step</Var>
+        </Filename>
+        <Rotate X="90" Y="0" Z="0"/>
+        <Offset X="0" Y="0" Z="0"/>
+        <Zoom X="1" Y="1" Z="1"/>
+      </Model3D>
+    </Pattern>
+  </Patterns>
+</Library>

@@ -5,74 +5,55 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-from typing import Optional
 import DipTrace
+from typing import Optional, List
 
 
 class ComponentLibrary(DipTrace.LibraryMixin):
+	extensions = ['elixml', 'xml', 'libxml']
 	defaults = {
 		'type': 'DipTrace-ComponentLibrary',
 		'name': '',
 		'hint': '',
 		'version': '4.2.0.1',
-		'units': 'mm',
+		'units': DipTrace.Units.mm,
 		'pattern_library': DipTrace.PatternLibrary(),
+		'components': []
 	}
 
 	@property
-	def name(self) -> Optional[str]:
-		return self.root.get("Name")
-
-	@name.setter
-	def name(self, name: str):
-		self.root.attrib['Name'] = name
-
-	@property
-	def hint(self) -> Optional[str]:
-		return self.root.get("Hint")
-
-	@hint.setter
-	def hint(self, hint: str):
-		self.root.attrib['Hint'] = hint
-
-	@property
-	def version(self) -> Optional[str]:
-		return self.root.get("Version")
-
-	@version.setter
-	def version(self, version: str):
-		self.root.attrib['Version'] = version
-
-	@property
-	def units(self) -> Optional[str]:
-		return self.root.get("Units")
-
-	@units.setter
-	def units(self, units: str):
-		self.root.attrib['Units'] = units
-
-	@property
-	def pattern_library(self) -> Optional[str]:
-		# TODO: convert xml to object
-		return None
+	def pattern_library(self) -> Optional[DipTrace.PatternLibrary]:
+		if (x := self.root.find('Library')) is not None:
+			return DipTrace.PatternLibrary(x)
+		else:
+			return None
 
 	@pattern_library.setter
 	def pattern_library(self, library):
-		print(str(library))
 		self.root.replace(self._get_first_or_new('Library'), library.root)
 
-	def add_components(self, components):
-		if type(components) is list:
+	@property
+	def components(self) -> Optional[List[DipTrace.Component]]:
+		if (x := self.root.find('Components')) is not None:
+			return list(map(lambda v: DipTrace.Component(v), x.findall('Component')))
+		else:
+			return None
+
+	@components.setter
+	def components(self, components: Optional[List[DipTrace.Component]]):
+		if components is not None:
+			x = self._get_first_or_new('Components')
 			for component in components:
-				self.add_components(component)
-		elif type(components) is DipTrace.Component:
-			self._get_first_or_new('Components').append(components.root)
-		return self
+				x.append(component.root)
+		elif x := self.root.find('Components'):
+			self.root.remove(x)
 
-	def save(self, filename: str):
-		with open(filename, 'w', encoding='utf-8') as datafile:
-			datafile.write(f'<?xml version="1.0" encoding="utf-8"?>\n{self}')
-
-
-if __name__ == "__main__":
-	pass
+	def normalize(self):
+		if (components := self.root.find('Components')) is not None:
+			if (component := components.find('Component')) is not None:
+				for pin in component.findall('Part/Pins/Pin'):
+					if pin.attrib.get('Group', None) is "0":
+						del pin.attrib['Group']
+				for pin in component.findall('Part/Shapes/Shape'):
+					if pin.attrib.get('Group', None) is "0":
+						del pin.attrib['Group']

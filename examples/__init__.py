@@ -5,5 +5,4 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-
 from .Utils import *

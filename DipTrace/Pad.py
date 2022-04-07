@@ -5,8 +5,8 @@
 # This program is distributed under the MIT license.
 # Glory to Ukraine!
 
-from typing import Optional
 import DipTrace
+from typing import Optional, List
 
 
 class Pad(
@@ -14,33 +14,35 @@ class Pad(
 	DipTrace.LockedMixin,
 	DipTrace.EnabledMixin,
 	DipTrace.GroupMixin,
+	DipTrace.AngleMixin
 ):
 	tag = 'Pad'
 	defaults = {
-		'side': DipTrace.Side.Top,
-		'angle': 0.0,
-		'number': 1,
-		**DipTrace.PointMixin.defaults,
-		**DipTrace.LockedMixin.defaults,
+		'type': '',
 		**DipTrace.EnabledMixin.defaults,
-		**DipTrace.GroupMixin.defaults,
+		**DipTrace.PointMixin.defaults,
+		**DipTrace.AngleMixin.defaults,
+		'group': None,
+		'locked': False,
+		'side': DipTrace.Side.Top,
+		'number': '1',
 	}
 
 	@property
+	def type(self) -> str:
+		return self.root.get('PadType')
+
+	@type.setter
+	def type(self, t: str):
+		self.root.attrib['PadType'] = t
+
+	@property
 	def side(self) -> Optional[DipTrace.Side]:
-		return self.root.get("Side")
+		return DipTrace.Side.from_str(self.root.get("Side"))
 
 	@side.setter
 	def side(self, side: DipTrace.Side):
-		self.root.attrib['Side'] = side.name
-
-	@property
-	def angle(self):
-		return self.root.get("Angle")
-
-	@angle.setter
-	def angle(self, value: float):
-		self.root.attrib['Angle'] = value
+		self.root.attrib['Side'] = side.value
 
 	@property
 	def number(self) -> str:
@@ -51,5 +53,16 @@ class Pad(
 		self._set_first_text('Number', value)
 
 
-if __name__ == "__main__":
-	pass
+class PadsMixin(DipTrace.Base):
+	pads_tag = 'Pads'
+	defaults = {'pads': ()}
+
+	@property
+	def pads(self) -> List[Pad]:
+		return list(map(lambda x: Pad(x), self._get_all_sub_tags(self.pads_tag, DipTrace.Pad.tag)))
+
+	@pads.setter
+	def pads(self, pads: List[Pad]):
+		x = self._get_first_or_new(self.pads_tag)
+		for pad in pads:
+			x.append(pad.root)

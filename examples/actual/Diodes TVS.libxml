@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Library Type="DipTrace-PatternLibrary" Version="4.2.0.1" Units="mm">
+<Library Type="DipTrace-PatternLibrary" Name="DipTrace Library" Hint="DipTrace XML Imported Library" Version="4.2.0.1" Units="mm">
   <PadTypes>
     <PadType Name="PadT0" Type="Surface" Side="Top">
       <MainStack Shape="Rectangle" Width="2.17" Height="1.67" Corner="14.9701"/>
@@ -9,7 +9,7 @@
     </PadType>
   </PadTypes>
   <Patterns>
-    <Pattern PatternType="PatType0" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
+    <Pattern RefDes="D" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
       <Name>LITTELFUSE_SMAJxxxA_N</Name>
       <Name_Description>Diode, Polarized, Molded, 5.04mm lead span x 2.595mm body width x 2.29mm height, 1.15mm lead length x 1.45mm lead width, nominal density</Name_Description>
       <Name_Unique>LITTELFUSE_SMAJxxxA</Name_Unique>
@@ -29,10 +29,10 @@
       <RecoveryCode Generator="Y" Model="Y">[Y;Molded;1;N;N;1;0;331;Y;Y;Y;Y;101;Littelfuse;LITTELFUSE|2;;;2.29;;;1.25;1.45;1.65;0.2;-0.2;;;;;;4.8;5.04;5.28;0.24;-0.24;3.99;4.295;4.6;0.305;-0.305;2.4;2.595;2.79;0.195;-0.195;0.78;1.15;1.52;0.37;-0.37;;;;;;1.96;2.17;1.67;2.17;1.67|0;|;;;;;;;;;0.5;0.5;0.5|||||;;;1|||||||||4934475;15461355;16119285;Y]</RecoveryCode>
       <DefPad PadType="PadT0"/>
       <Pads>
-        <Pad PadType="PadT0" Enabled="Y" X="-2.065" Y="0" Angle="0" Locked="N" Side="Top" Group="0">
+        <Pad PadType="PadT0" Enabled="Y" X="-2.065" Y="0" Angle="0" Locked="N" Side="Top">
           <Number>1</Number>
         </Pad>
-        <Pad PadType="PadT0" Enabled="Y" X="2.065" Y="0" Angle="3.1416" Locked="N" Side="Top" Group="0">
+        <Pad PadType="PadT0" Enabled="Y" X="2.065" Y="0" Angle="3.1416" Locked="N" Side="Top">
           <Number>2</Number>
         </Pad>
       </Pads>
@@ -99,7 +99,7 @@
         <Zoom X="1" Y="1" Z="1"/>
       </Model3D>
     </Pattern>
-    <Pattern PatternType="PatType1" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
+    <Pattern RefDes="D" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
       <Name>LITTELFUSE_SMAJxxxCA_N</Name>
       <Name_Description>Diode, Non-Polarized, Molded, 5.04mm lead span x 2.595mm body width x 2.29mm height, 1.15mm lead length x 1.45mm lead width, nominal density</Name_Description>
       <Name_Unique>LITTELFUSE_SMAJxxxCA</Name_Unique>

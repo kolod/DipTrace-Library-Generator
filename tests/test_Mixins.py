@@ -7,9 +7,10 @@
 
 import unittest
 import DipTrace
+import DipTrace.Base
 
 
-class Test(DipTrace.Base):
+class Test(DipTrace.Base.Base):
 	tag = 'Part'
 
 

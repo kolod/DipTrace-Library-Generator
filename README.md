@@ -1,4 +1,6 @@
 # DipTrace Library Generator
+![Coverage Status](./images/coverage-badge.svg)
+
 This is the python library for generating the DipTrace components and patterns libraries.
 
 ## License

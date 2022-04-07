@@ -10,7 +10,7 @@
       </PadType>
     </PadTypes>
     <Patterns>
-      <Pattern PatternType="PatType0" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
+      <Pattern PatternType="PatType0" RefDes="D" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
         <Name>LITTELFUSE_SMAJxxxA_N</Name>
         <Name_Description>Diode, Polarized, Molded, 5.04mm lead span x 2.595mm body width x 2.29mm height, 1.15mm lead length x 1.45mm lead width, nominal density</Name_Description>
         <Name_Unique>LITTELFUSE_SMAJxxxA</Name_Unique>
@@ -100,7 +100,7 @@
           <Zoom X="1" Y="1" Z="1"/>
         </Model3D>
       </Pattern>
-      <Pattern PatternType="PatType1" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
+      <Pattern PatternType="PatType1" RefDes="D" Mounting="SMD" Width="6.7" Height="3.2" Orientation="0" LockTypeChange="Y" Type="IPC-7351" Float1="0" Float2="0" Float3="0" Int1="1" Int2="0">
         <Name>LITTELFUSE_SMAJxxxCA_N</Name>
         <Name_Description>Diode, Non-Polarized, Molded, 5.04mm lead span x 2.595mm body width x 2.29mm height, 1.15mm lead length x 1.45mm lead width, nominal density</Name_Description>
         <Name_Unique>LITTELFUSE_SMAJxxxCA</Name_Unique>
@@ -120,10 +120,10 @@
         <RecoveryCode Generator="Y" Model="Y">[Y;Molded;1;N;N;1;0;331;Y;Y;Y;Y;101;Littelfuse;LITTELFUSE|3;;;2.29;;;1.25;1.45;1.65;0.2;-0.2;;;;;;4.8;5.04;5.28;0.24;-0.24;3.99;4.295;4.6;0.305;-0.305;2.4;2.595;2.79;0.195;-0.195;0.78;1.15;1.52;0.37;-0.37;;;;;;1.96;2.17;1.67;2.17;1.67|0;|;;;;;;;;;0.5;0.5;0.5|||||;;;1|||||||||4934475;15461355;16119285;Y]</RecoveryCode>
         <DefPad PadType="PadT0"/>
         <Pads>
-          <Pad PadType="PadT0" Enabled="Y" X="-2.065" Y="0" Angle="0" Locked="N" Side="Top">
+          <Pad PadType="PadT0" Enabled="Y" X="-2.065" Y="0" Angle="0" Locked="N" Side="Top" Group="0">
             <Number>1</Number>
           </Pad>
-          <Pad PadType="PadT0" Enabled="Y" X="2.065" Y="0" Angle="3.1416" Locked="N" Side="Top">
+          <Pad PadType="PadT0" Enabled="Y" X="2.065" Y="0" Angle="3.1416" Locked="N" Side="Top" Group="0">
             <Number>2</Number>
           </Pad>
         </Pads>
@@ -184,7 +184,7 @@
   </Library>
   <Components>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ5.0A</Name>
         <PartName>Part 1</PartName>
         <Value>5 V</Value>
@@ -194,25 +194,25 @@
           <Name>Diodes</Name>
         </Category>
         <Pins>
-          <Pin X="2.54" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="180" PadIndex="1" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0" Group="0">
+          <Pin X="2.54" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="180" PadIndex="1" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">
             <Name>1</Name>
             <PadNumber>1</PadNumber>
             <NameFont Size="5" Width="-2" Scale="1"/>
           </Pin>
-          <Pin X="-2.54" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="0" PadIndex="2" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0" Group="0">
+          <Pin X="-2.54" Y="0" Enabled="Y" Locked="Y" Type="Default" ElectricType="Undefined" Orientation="0" PadIndex="2" Length="2.54" ShowName="N" NumXShift="0" NumYShift="0" NameXShift="0" NameYShift="0" SignalDelay="0" NumOrientation="0" NameOrientation="0">
             <Name>2</Name>
             <PadNumber>2</PadNumber>
             <NameFont Size="5" Width="-2" Scale="1"/>
           </Pin>
         </Pins>
         <Shapes>
-          <Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">
+          <Shape Type="Line" LineWidth="0.25" Enabled="Y" Locked="Y">
             <Points>
               <Item X="-2.54" Y="0"/>
               <Item X="2.54" Y="0"/>
             </Points>
           </Shape>
-          <Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">
+          <Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y">
             <Points>
               <Item X="-1.0999" Y="1.27"/>
               <Item X="1.0999" Y="0"/>
@@ -220,7 +220,7 @@
               <Item X="-1.0999" Y="1.27"/>
             </Points>
           </Shape>
-          <Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y" Group="0">
+          <Shape Type="Polyline" LineWidth="0.25" Enabled="Y" Locked="Y">
             <Points>
               <Item X="1.7349" Y="1.27"/>
               <Item X="1.0999" Y="1.27"/>
@@ -233,7 +233,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ6.0A</Name>
         <PartName>Part 1</PartName>
         <Value>6 V</Value>
@@ -282,7 +282,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ6.5A</Name>
         <PartName>Part 1</PartName>
         <Value>6.5 V</Value>
@@ -331,7 +331,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ7.0A</Name>
         <PartName>Part 1</PartName>
         <Value>7 V</Value>
@@ -380,7 +380,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ7.5A</Name>
         <PartName>Part 1</PartName>
         <Value>7.5 V</Value>
@@ -429,7 +429,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ8.0A</Name>
         <PartName>Part 1</PartName>
         <Value>8 V</Value>
@@ -478,7 +478,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ8.5A</Name>
         <PartName>Part 1</PartName>
         <Value>8.5 V</Value>
@@ -527,7 +527,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ9.0A</Name>
         <PartName>Part 1</PartName>
         <Value>9 V</Value>
@@ -576,7 +576,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ10A</Name>
         <PartName>Part 1</PartName>
         <Value>10 V</Value>
@@ -625,7 +625,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ11A</Name>
         <PartName>Part 1</PartName>
         <Value>11 V</Value>
@@ -674,7 +674,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ12A</Name>
         <PartName>Part 1</PartName>
         <Value>12 V</Value>
@@ -723,7 +723,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ13A</Name>
         <PartName>Part 1</PartName>
         <Value>13 V</Value>
@@ -772,7 +772,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ14A</Name>
         <PartName>Part 1</PartName>
         <Value>14 V</Value>
@@ -821,7 +821,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ15A</Name>
         <PartName>Part 1</PartName>
         <Value>15 V</Value>
@@ -870,7 +870,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ16A</Name>
         <PartName>Part 1</PartName>
         <Value>16 V</Value>
@@ -919,7 +919,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ17A</Name>
         <PartName>Part 1</PartName>
         <Value>17 V</Value>
@@ -968,7 +968,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ18A</Name>
         <PartName>Part 1</PartName>
         <Value>18 V</Value>
@@ -1017,7 +1017,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ20A</Name>
         <PartName>Part 1</PartName>
         <Value>20 V</Value>
@@ -1066,7 +1066,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ22A</Name>
         <PartName>Part 1</PartName>
         <Value>22 V</Value>
@@ -1115,7 +1115,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ24A</Name>
         <PartName>Part 1</PartName>
         <Value>24 V</Value>
@@ -1164,7 +1164,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ26A</Name>
         <PartName>Part 1</PartName>
         <Value>26 V</Value>
@@ -1213,7 +1213,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ28A</Name>
         <PartName>Part 1</PartName>
         <Value>28 V</Value>
@@ -1262,7 +1262,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ30A</Name>
         <PartName>Part 1</PartName>
         <Value>30 V</Value>
@@ -1311,7 +1311,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ33A</Name>
         <PartName>Part 1</PartName>
         <Value>33 V</Value>
@@ -1360,7 +1360,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ36A</Name>
         <PartName>Part 1</PartName>
         <Value>36 V</Value>
@@ -1409,7 +1409,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ40A</Name>
         <PartName>Part 1</PartName>
         <Value>40 V</Value>
@@ -1458,7 +1458,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ43A</Name>
         <PartName>Part 1</PartName>
         <Value>43 V</Value>
@@ -1507,7 +1507,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ45A</Name>
         <PartName>Part 1</PartName>
         <Value>45 V</Value>
@@ -1556,7 +1556,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ48A</Name>
         <PartName>Part 1</PartName>
         <Value>48 V</Value>
@@ -1605,7 +1605,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ51A</Name>
         <PartName>Part 1</PartName>
         <Value>51 V</Value>
@@ -1654,7 +1654,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ54A</Name>
         <PartName>Part 1</PartName>
         <Value>54 V</Value>
@@ -1703,7 +1703,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ58A</Name>
         <PartName>Part 1</PartName>
         <Value>58 V</Value>
@@ -1752,7 +1752,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ60A</Name>
         <PartName>Part 1</PartName>
         <Value>60 V</Value>
@@ -1801,7 +1801,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ64A</Name>
         <PartName>Part 1</PartName>
         <Value>64 V</Value>
@@ -1850,7 +1850,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ70A</Name>
         <PartName>Part 1</PartName>
         <Value>70 V</Value>
@@ -1899,7 +1899,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ75A</Name>
         <PartName>Part 1</PartName>
         <Value>75 V</Value>
@@ -1948,7 +1948,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ78A</Name>
         <PartName>Part 1</PartName>
         <Value>78 V</Value>
@@ -1997,7 +1997,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ85A</Name>
         <PartName>Part 1</PartName>
         <Value>85 V</Value>
@@ -2046,7 +2046,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ90A</Name>
         <PartName>Part 1</PartName>
         <Value>90 V</Value>
@@ -2095,7 +2095,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ100A</Name>
         <PartName>Part 1</PartName>
         <Value>100 V</Value>
@@ -2144,7 +2144,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ110A</Name>
         <PartName>Part 1</PartName>
         <Value>110 V</Value>
@@ -2193,7 +2193,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ120A</Name>
         <PartName>Part 1</PartName>
         <Value>120 V</Value>
@@ -2242,7 +2242,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ130A</Name>
         <PartName>Part 1</PartName>
         <Value>130 V</Value>
@@ -2291,7 +2291,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ150A</Name>
         <PartName>Part 1</PartName>
         <Value>150 V</Value>
@@ -2340,7 +2340,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ160A</Name>
         <PartName>Part 1</PartName>
         <Value>160 V</Value>
@@ -2389,7 +2389,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ170A</Name>
         <PartName>Part 1</PartName>
         <Value>170 V</Value>
@@ -2438,7 +2438,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ180A</Name>
         <PartName>Part 1</PartName>
         <Value>180 V</Value>
@@ -2487,7 +2487,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ200A</Name>
         <PartName>Part 1</PartName>
         <Value>200 V</Value>
@@ -2536,7 +2536,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ220A</Name>
         <PartName>Part 1</PartName>
         <Value>220 V</Value>
@@ -2585,7 +2585,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ250A</Name>
         <PartName>Part 1</PartName>
         <Value>250 V</Value>
@@ -2634,7 +2634,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ300A</Name>
         <PartName>Part 1</PartName>
         <Value>300 V</Value>
@@ -2683,7 +2683,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ350A</Name>
         <PartName>Part 1</PartName>
         <Value>350 V</Value>
@@ -2732,7 +2732,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ400A</Name>
         <PartName>Part 1</PartName>
         <Value>400 V</Value>
@@ -2781,7 +2781,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ440A</Name>
         <PartName>Part 1</PartName>
         <Value>440 V</Value>
@@ -2830,7 +2830,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ5.0CA</Name>
         <PartName>Part 1</PartName>
         <Value>5 V</Value>
@@ -2882,7 +2882,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ6.0CA</Name>
         <PartName>Part 1</PartName>
         <Value>6 V</Value>
@@ -2934,7 +2934,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ6.5CA</Name>
         <PartName>Part 1</PartName>
         <Value>6.5 V</Value>
@@ -2986,7 +2986,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ7.0CA</Name>
         <PartName>Part 1</PartName>
         <Value>7 V</Value>
@@ -3038,7 +3038,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ7.5CA</Name>
         <PartName>Part 1</PartName>
         <Value>7.5 V</Value>
@@ -3090,7 +3090,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ8.0CA</Name>
         <PartName>Part 1</PartName>
         <Value>8 V</Value>
@@ -3142,7 +3142,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ8.5CA</Name>
         <PartName>Part 1</PartName>
         <Value>8.5 V</Value>
@@ -3194,7 +3194,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ9.0CA</Name>
         <PartName>Part 1</PartName>
         <Value>9 V</Value>
@@ -3246,7 +3246,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ10CA</Name>
         <PartName>Part 1</PartName>
         <Value>10 V</Value>
@@ -3298,7 +3298,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ11CA</Name>
         <PartName>Part 1</PartName>
         <Value>11 V</Value>
@@ -3350,7 +3350,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ12CA</Name>
         <PartName>Part 1</PartName>
         <Value>12 V</Value>
@@ -3402,7 +3402,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ13CA</Name>
         <PartName>Part 1</PartName>
         <Value>13 V</Value>
@@ -3454,7 +3454,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ14CA</Name>
         <PartName>Part 1</PartName>
         <Value>14 V</Value>
@@ -3506,7 +3506,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ15CA</Name>
         <PartName>Part 1</PartName>
         <Value>15 V</Value>
@@ -3558,7 +3558,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ16CA</Name>
         <PartName>Part 1</PartName>
         <Value>16 V</Value>
@@ -3610,7 +3610,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ17CA</Name>
         <PartName>Part 1</PartName>
         <Value>17 V</Value>
@@ -3662,7 +3662,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ18CA</Name>
         <PartName>Part 1</PartName>
         <Value>18 V</Value>
@@ -3714,7 +3714,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ20CA</Name>
         <PartName>Part 1</PartName>
         <Value>20 V</Value>
@@ -3766,7 +3766,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ22CA</Name>
         <PartName>Part 1</PartName>
         <Value>22 V</Value>
@@ -3818,7 +3818,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ24CA</Name>
         <PartName>Part 1</PartName>
         <Value>24 V</Value>
@@ -3870,7 +3870,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ26CA</Name>
         <PartName>Part 1</PartName>
         <Value>26 V</Value>
@@ -3922,7 +3922,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ28CA</Name>
         <PartName>Part 1</PartName>
         <Value>28 V</Value>
@@ -3974,7 +3974,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ30CA</Name>
         <PartName>Part 1</PartName>
         <Value>30 V</Value>
@@ -4026,7 +4026,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ33CA</Name>
         <PartName>Part 1</PartName>
         <Value>33 V</Value>
@@ -4078,7 +4078,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ36CA</Name>
         <PartName>Part 1</PartName>
         <Value>36 V</Value>
@@ -4130,7 +4130,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ40CA</Name>
         <PartName>Part 1</PartName>
         <Value>40 V</Value>
@@ -4182,7 +4182,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ43CA</Name>
         <PartName>Part 1</PartName>
         <Value>43 V</Value>
@@ -4234,7 +4234,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ45CA</Name>
         <PartName>Part 1</PartName>
         <Value>45 V</Value>
@@ -4286,7 +4286,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ48CA</Name>
         <PartName>Part 1</PartName>
         <Value>48 V</Value>
@@ -4338,7 +4338,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ51CA</Name>
         <PartName>Part 1</PartName>
         <Value>51 V</Value>
@@ -4390,7 +4390,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ54CA</Name>
         <PartName>Part 1</PartName>
         <Value>54 V</Value>
@@ -4442,7 +4442,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ58CA</Name>
         <PartName>Part 1</PartName>
         <Value>58 V</Value>
@@ -4494,7 +4494,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ60CA</Name>
         <PartName>Part 1</PartName>
         <Value>60 V</Value>
@@ -4546,7 +4546,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ64CA</Name>
         <PartName>Part 1</PartName>
         <Value>64 V</Value>
@@ -4598,7 +4598,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ70CA</Name>
         <PartName>Part 1</PartName>
         <Value>70 V</Value>
@@ -4650,7 +4650,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ75CA</Name>
         <PartName>Part 1</PartName>
         <Value>75 V</Value>
@@ -4702,7 +4702,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ78CA</Name>
         <PartName>Part 1</PartName>
         <Value>78 V</Value>
@@ -4754,7 +4754,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ85CA</Name>
         <PartName>Part 1</PartName>
         <Value>85 V</Value>
@@ -4806,7 +4806,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ90CA</Name>
         <PartName>Part 1</PartName>
         <Value>90 V</Value>
@@ -4858,7 +4858,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ100CA</Name>
         <PartName>Part 1</PartName>
         <Value>100 V</Value>
@@ -4910,7 +4910,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ110CA</Name>
         <PartName>Part 1</PartName>
         <Value>110 V</Value>
@@ -4962,7 +4962,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ120CA</Name>
         <PartName>Part 1</PartName>
         <Value>120 V</Value>
@@ -5014,7 +5014,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ130CA</Name>
         <PartName>Part 1</PartName>
         <Value>130 V</Value>
@@ -5066,7 +5066,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ150CA</Name>
         <PartName>Part 1</PartName>
         <Value>150 V</Value>
@@ -5118,7 +5118,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ160CA</Name>
         <PartName>Part 1</PartName>
         <Value>160 V</Value>
@@ -5170,7 +5170,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ170CA</Name>
         <PartName>Part 1</PartName>
         <Value>170 V</Value>
@@ -5222,7 +5222,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ180CA</Name>
         <PartName>Part 1</PartName>
         <Value>180 V</Value>
@@ -5274,7 +5274,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ200CA</Name>
         <PartName>Part 1</PartName>
         <Value>200 V</Value>
@@ -5326,7 +5326,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ220CA</Name>
         <PartName>Part 1</PartName>
         <Value>220 V</Value>
@@ -5378,7 +5378,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ250CA</Name>
         <PartName>Part 1</PartName>
         <Value>250 V</Value>
@@ -5430,7 +5430,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ300CA</Name>
         <PartName>Part 1</PartName>
         <Value>300 V</Value>
@@ -5482,7 +5482,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ350CA</Name>
         <PartName>Part 1</PartName>
         <Value>350 V</Value>
@@ -5534,7 +5534,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ400CA</Name>
         <PartName>Part 1</PartName>
         <Value>400 V</Value>
@@ -5586,7 +5586,7 @@
       </Part>
     </Component>
     <Component>
-      <Part RefDes="D" PartType="Normal" ShowNumbers="1" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
+      <Part RefDes="D" PartType="Normal" ShowNumbers="2" Type="0" Int1="0" Int2="0" Width="5.08" Height="2.54" LockTypeChange="N" SubFolderIndex="1">
         <Name>SMAJ440CA</Name>
         <PartName>Part 1</PartName>
         <Value>440 V</Value>
